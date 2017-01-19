@@ -30,9 +30,7 @@ angular
          *
          */
         config: {
-            cache: false,
-            crypt: false,
-            fullcryptquery: false
+            cache: false
         },
 
         /**
@@ -44,7 +42,7 @@ angular
          * @description
          * The API endpoint for your Picard stack.
          */
-        base_url: null
+        base_url: 'https://www.picard.io/'
       })
 
   .factory('picard', ['$q', '$http', '$window', '$state', 'picardioConfig', function ($q, $http, $window, $state, picardioConfig) {
@@ -157,7 +155,6 @@ angular
                 return generateResponse('DELETE', endpoint, params, options);
             }
         };
-
 
     }
   ]);
