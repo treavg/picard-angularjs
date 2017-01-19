@@ -1,0 +1,32 @@
+{
+  "name": "picardio",
+  "version": "0.0.1",
+  "main": "./dist/picardio.js",
+  "description": "Picardio API AngularJS module.",
+  "homepage": "https://github.com/brigmecham/picardio-angularjs",
+  "private": false,
+  "authors": [
+    "Brig Mecham"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brigmecham/picardio-angularjs.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "1.2.x",
+    "angular-mocks": "~1.2.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build.conf.js",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json"
+  ]
+}
