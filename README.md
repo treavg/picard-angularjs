@@ -1,10 +1,10 @@
 # picardio-angularjs
 AngularJS module for interacting with Picard.io API.
 
-#H1 Bower Install
+# Bower Install
 bower install brigmecham/picardio-angularjs
 
-# H1 Usage
+# Usage
 
 ```javascript
 angular.module('app', ['picardio'])
