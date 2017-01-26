@@ -9,28 +9,41 @@ angular
 
 'use strict';
 
+/**
+ * @ngdoc overview
+ * @name picard
+ *
+ * @description
+ * picard module provides access to picard api
+ */
 angular
   .module('picard')
+      /**
+       * @ngdoc object
+       * @name picard.config:picardConfig
+       *
+       * @description
+       * Default values for making api requests
+       */
       .constant('picardConfig', {
         /**
          * @ngdoc property
-         * @name picardio.config.picardConfig#fullresponse
-         * @propertyOf picardio.config:picardConfig
+         * @name picard.config.picardConfig#fullresponse
+         * @propertyOf picard.config:picardConfig
          * @returns {bool} When true entire http response is returned.
          *
          * @description
          * Used to control which data gets returned from API call.
          *
          * @example
-         *   // Causes angular-moment to always treat the input values as unix timestamps
          *   picardConfig.fullResponse = true;
          */
         fullResponse: false,
 
         /**
          * @ngdoc property
-         * @name picardio.config.picardConfig#config
-         * @propertyOf picardio.config:picardConfig
+         * @name picard.config.picardConfig#config
+         * @propertyOf picard.config:picardConfig
          * @returns {object} $http config
          *
          * @description
@@ -44,8 +57,8 @@ angular
 
         /**
          * @ngdoc property
-         * @name picardio.config.picardConfig#base_url
-         * @propertyOf picardio.config:picardConfig
+         * @name picard.config.picardConfig#base_url
+         * @propertyOf picard.config:picardConfig
          * @returns {string} API endpoint(e.g. https://stackname.picard.io/)
          *
          * @description
@@ -54,22 +67,29 @@ angular
         base_url: 'https://www.picard.io/'
       })
 
+      /**
+       * @ngdoc service
+       * @name picard.service.picard
+       * @module picard
+       */
+
+
   .factory('picard', ['$q', '$http', '$window', '$state', 'picardConfig', function ($q, $http, $window, $state, picardConfig) {
 
        var baseUrl = picardConfig.base_url;
 
         /**
          * @ngdoc function
-         * @name picardio.factory.picard#generateResponse
-         * @methodOf picardio.factory.picard
+         * @name picard.service.picard#generateResponse
+         * @methodOf picard.service.picard
          *
          * @description
-         * Builds the http config variable and makes the API call to the endpoint
+         * Internal function that's called by public functions to make API requests to Picard.
          *
          * @param {string} method Http method (e.g. GET, PUT, POST, DELETE)
-         * @param {string} endpoint valid picardio endpoint
-         * @params {object} params http parameters
-         * @params {object} options http config options
+         * @param {string} endpoint Valid picard endpoint.
+         * @param {Object} params HTTP parameters
+         * @param {Object} [options] HTTP config options.  See usage section here for options https://docs.angularjs.org/api/ng/service/$http
          */
 
         function generateResponse (method, endpoint, params, options) {
@@ -77,8 +97,8 @@ angular
             params = {}
           }
           // Build the $http config object
-          // If options is specified as a parameter then the values 
-          // for the fields in the options.config object 
+          // If options is specified as a parameter then the values
+          // for the fields in the options.config object
           // will overwrite the defaults.
             var opts = angular.extend({}, picardConfig, options || {});
             var http = angular.extend({
@@ -107,14 +127,19 @@ angular
 
         /**
          * @ngdoc function
-         * @name picardio.factory.picard#success
-         * @methodOf picardio.factory.picard
+         * @name picard.service.picard#success
+         * @methodOf picard.service.picard
          *
          * @description
-         * Returns either the full reponse or just the data and http status
+         * Internal function called if API call is successful, meaning its status code is in the range [200,299].
+         * If opts.fullResponse is true then the entire http response is returned.  Otherwise
+         * it returns only the data and status fields.  Note opts.fullResponse is false by default. To
+         * modify the value in a http GET call create an object with {fullRespone:true} and then pass it into
+         * the options parameter to the Picard.get call.
          *
-         * @params {object} opts http config options used to make call
-         * @params {object} res http response         
+         *
+         * @param {object} opts http config options used to make call
+         * @param {object} res http response
          */
 
         function res (opts, res) {
@@ -128,14 +153,18 @@ angular
 
         /**
          * @ngdoc function
-         * @name picardio.factory.picard#error
-         * @methodOf picardio.factory.picard
+         * @name picard.service.picard#error
+         * @methodOf picard.service.picard
          *
          * @description
-         * Returns either the full reponse or just the data and http status
+         * Internal function called if API call is unsuccessful, meaning its status code is outside the range [200,299].
+         * The response is the rejection of the promise.  If opts.fullResponse is true then the entire http response is returned.  Otherwise
+         * it returns only the data and status fields.  Note opts.fullResponse is false by default. To
+         * modify the value in a http GET call create an object with {fullRespone:true} and then pass it into
+         * the options parameter to the Picard.get call.
          *
-         * @params {object} opts http config options used to make call
-         * @params {object} res http response         
+         * @param {object} opts http config options used to make call
+         * @param {object} res http response
          */
 
         function err (opts, res) {
@@ -147,18 +176,65 @@ angular
             return $q.reject(ret);
         }
 
-
         // return functions to call generateResponse function
         return {
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#get
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Public function which preforms a GET request to the picard api
+             *
+             * @param {string} endpoint endpoint name (required)
+             * @param {object} [params] api call request parameters
+             * @param {options} [options] http options to override
+             */
             get: function (endpoint, params, options) {
                 return generateResponse('GET', endpoint, params, options);
             },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#post
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Public function which preforms a POST request to the picard api
+             *
+             * @param {string} endpoint endpoint name (required)
+             * @param {object} [params] api call request parameters
+             * @param {options} [options] http options to override
+             */
             post: function (endpoint, params, options) {
                 return generateResponse('POST', endpoint, params, options);
             },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#put
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Public function which preforms a PUT request to the picard api
+             *
+             * @param {string} endpoint endpoint name (required)
+             * @param {object} [params] api call request parameters
+             * @param {options} [options] http options to override
+             */
             put: function (endpoint, params, options) {
                 return generateResponse('PUT', endpoint, params, options);
             },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#delete
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Public function which preforms a DELETE request to the picard api
+             *
+             * @param {string} endpoint endpoint name (required)
+             * @param {object} [params] api call request parameters
+             * @param {options} [options] http options to override
+             */
             delete: function (endpoint, params, options){
                 return generateResponse('DELETE', endpoint, params, options);
             }
