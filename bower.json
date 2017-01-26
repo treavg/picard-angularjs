@@ -1,5 +1,5 @@
 {
-  "name": "picard",
+  "name": "picard-angularjs",
   "version": "0.0.2",
   "main": "./dist/picard.js",
   "description": "Picard API AngularJS module.",
