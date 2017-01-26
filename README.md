@@ -1,14 +1,14 @@
-# picardio-angularjs
+# picard-angularjs
 AngularJS module for interacting with Picard.io API.
 
 # Bower Install
-bower install brigmecham/picardio-angularjs
+bower install brigmecham/picard-angularjs
 
 # Usage
 
 ```javascript
-angular.module('app', ['picardio'])
- .constant('picardioConfig', {
+angular.module('app', ['picard'])
+ .constant('picardConfig', {
     base_url: 'https://www.picard.io/', // your stack goes here
     fullResponse: false,
     config: {

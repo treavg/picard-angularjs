@@ -13,7 +13,8 @@
     "url": "git://github.com/brigmecham/picardio-angularjs.git"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "picard"
   ],
   "license": "MIT",
   "devDependencies": {

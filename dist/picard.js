@@ -1,12 +1,21 @@
+/*!
+ * See LICENSE in this repository for license information
+ */
+(function(){
 'use strict';
 
 angular
-  .module('picardio')
-      .constant('picardioConfig', {
+  .module('picard', []);
+
+'use strict';
+
+angular
+  .module('picard')
+      .constant('picardConfig', {
         /**
          * @ngdoc property
-         * @name picardio.config.picardioBaseUrl#fullresponse
-         * @propertyOf picardio.config:picardioConfig
+         * @name picardio.config.picardConfig#fullresponse
+         * @propertyOf picardio.config:picardConfig
          * @returns {bool} When true entire http response is returned.
          *
          * @description
@@ -14,14 +23,14 @@ angular
          *
          * @example
          *   // Causes angular-moment to always treat the input values as unix timestamps
-         *   picardioConfig.fullResponse = true;
+         *   picardConfig.fullResponse = true;
          */
         fullResponse: false,
 
         /**
          * @ngdoc property
-         * @name picardio.config.picardioConfig#config
-         * @propertyOf picardio.config:picardioConfig
+         * @name picardio.config.picardConfig#config
+         * @propertyOf picardio.config:picardConfig
          * @returns {object} $http config
          *
          * @description
@@ -35,8 +44,8 @@ angular
 
         /**
          * @ngdoc property
-         * @name picardio.config.picardioConfig#base_url
-         * @propertyOf picardio.config:picardioConfig
+         * @name picardio.config.picardConfig#base_url
+         * @propertyOf picardio.config:picardConfig
          * @returns {string} API endpoint(e.g. https://stackname.picard.io/)
          *
          * @description
@@ -45,9 +54,9 @@ angular
         base_url: 'https://www.picard.io/'
       })
 
-  .factory('picard', ['$q', '$http', '$window', '$state', 'picardioConfig', function ($q, $http, $window, $state, picardioConfig) {
+  .factory('picard', ['$q', '$http', '$window', '$state', 'picardConfig', function ($q, $http, $window, $state, picardConfig) {
 
-       var baseUrl = picardioConfig.base_url;
+       var baseUrl = picardConfig.base_url;
 
         /**
          * @ngdoc function
@@ -71,7 +80,7 @@ angular
           // If options is specified as a parameter then the values 
           // for the fields in the options.config object 
           // will overwrite the defaults.
-            var opts = angular.extend({}, picardioConfig, options || {});
+            var opts = angular.extend({}, picardConfig, options || {});
             var http = angular.extend({
                 method: method,
                 url: baseUrl + endpoint,
@@ -89,7 +98,6 @@ angular
                 http.data = params;
             }
             // make the API call and call either the success or error function
-
             return $http(http).then(
                 res.bind(this, opts),
                 err.bind(this, opts)
@@ -158,3 +166,4 @@ angular
 
     }
   ]);
+})();
