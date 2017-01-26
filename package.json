@@ -1,6 +1,6 @@
 {
   "name": "picard",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "description": "Picard API AngularJS module",
   "repository": "https://github.com/brigmecham/picard-angularjs",
