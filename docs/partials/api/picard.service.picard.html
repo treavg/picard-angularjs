@@ -1,0 +1,65 @@
+<h1><code ng:non-bindable="">picard</code>
+<div><span class="hint">service in module <code ng:non-bindable="">picard</code>
+</span>
+</div>
+</h1>
+<div><div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_delete">delete(endpoint, [params], [options])</h3>
+<div class="delete"><div class="picard-service-picard-delete-page"><p>Public function which preforms a DELETE request to the picard api</p>
+</div><h5 id="methods_delete_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-delete-page"><p>endpoint name (required)</p>
+</div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-delete-page"><p>api call request parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-delete-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_error">error(opts, res)</h3>
+<div class="error"><div class="picard-service-picard-error-page"><p>Internal function called if API call is unsuccessful, meaning its status code is outside the range [200,299].
+The response is the rejection of the promise.  If opts.fullResponse is true then the entire http response is returned.  Otherwise
+it returns only the data and status fields.  Note opts.fullResponse is false by default. To
+modify the value in a http GET call create an object with {fullRespone:true} and then pass it into
+the options parameter to the Picard.get call.</p>
+</div><h5 id="methods_error_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>opts</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-error-page"><p>http config options used to make call</p>
+</div></td></tr><tr><td>res</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-error-page"><p>http response</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_generateresponse">generateResponse(method, endpoint, params, [options])</h3>
+<div class="generateresponse"><div class="picard-service-picard-generateresponse-page"><p>Internal function that&#39;s called by public functions to make API requests to Picard.</p>
+</div><h5 id="methods_generateresponse_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-generateresponse-page"><p>Http method (e.g. GET, PUT, POST, DELETE)</p>
+</div></td></tr><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-generateresponse-page"><p>Valid picard endpoint.</p>
+</div></td></tr><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-generateresponse-page"><p>HTTP parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-generateresponse-page"><p>HTTP config options.  See usage section here for options <a href="https://docs.angularjs.org/api/ng/service/$http">https://docs.angularjs.org/api/ng/service/$http</a></p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_get">get(endpoint, [params], [options])</h3>
+<div class="get"><div class="picard-service-picard-get-page"><p>Public function which preforms a GET request to the picard api</p>
+</div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-get-page"><p>endpoint name (required)</p>
+</div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-get-page"><p>api call request parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-get-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_post">post(endpoint, [params], [options])</h3>
+<div class="post"><div class="picard-service-picard-post-page"><p>Public function which preforms a POST request to the picard api</p>
+</div><h5 id="methods_post_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-post-page"><p>endpoint name (required)</p>
+</div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-post-page"><p>api call request parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-post-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_put">put(endpoint, [params], [options])</h3>
+<div class="put"><div class="picard-service-picard-put-page"><p>Public function which preforms a PUT request to the picard api</p>
+</div><h5 id="methods_put_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-put-page"><p>endpoint name (required)</p>
+</div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-put-page"><p>api call request parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-put-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_success">success(opts, res)</h3>
+<div class="success"><div class="picard-service-picard-success-page"><p>Internal function called if API call is successful, meaning its status code is in the range [200,299].
+If opts.fullResponse is true then the entire http response is returned.  Otherwise
+it returns only the data and status fields.  Note opts.fullResponse is false by default. To
+modify the value in a http GET call create an object with {fullRespone:true} and then pass it into
+the options parameter to the Picard.get call.</p>
+</div><h5 id="methods_success_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>opts</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-success-page"><p>http config options used to make call</p>
+</div></td></tr><tr><td>res</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-success-page"><p>http response</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>
