@@ -2,8 +2,8 @@
   "name": "picard",
   "private": true,
   "version": "0.0.1",
-  "description": "Picardio API AngularJS module",
-  "repository": "https://github.com/brigmecham/picardio-angularjs",
+  "description": "Picard API AngularJS module",
+  "repository": "https://github.com/brigmecham/picard-angularjs",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.3.1",

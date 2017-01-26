@@ -1,16 +1,16 @@
 {
-  "name": "picardio",
+  "name": "picard",
   "version": "0.0.1",
-  "main": "./dist/picardio.js",
-  "description": "Picardio API AngularJS module.",
-  "homepage": "https://github.com/brigmecham/picardio-angularjs",
+  "main": "./dist/picard.js",
+  "description": "Picard API AngularJS module.",
+  "homepage": "https://github.com/brigmecham/picard-angularjs",
   "private": false,
   "authors": [
     "Brig Mecham"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/brigmecham/picardio-angularjs.git"
+    "url": "git://github.com/brigmecham/picard-angularjs.git"
   },
   "keywords": [
     "angular",
