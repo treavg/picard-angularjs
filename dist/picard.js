@@ -17,15 +17,15 @@ angular
  * picard module provides access to picard api
  */
 angular
-  .module('picard')
-      /**
-       * @ngdoc object
-       * @name picard.config:picardConfig
-       *
-       * @description
-       * Default values for making api requests
-       */
-      .constant('picardConfig', {
+    .module('picard')
+    /**
+     * @ngdoc object
+     * @name picard.config:picardConfig
+     *
+     * @description
+     * Default values for making api requests
+     */
+    .constant('picardConfig', {
         /**
          * @ngdoc property
          * @name picard.config.picardConfig#fullresponse
@@ -65,22 +65,22 @@ angular
          * The API endpoint for your Picard stack.
          */
         base_url: 'https://www.picard.io/'
-      })
+    })
 
-      /**
-       * @ngdoc service
-       * @name picard.service.picard
-       * @module picard
-       */
+    /**
+     * @ngdoc service
+     * @name picard.service.picard
+     * @module picard
+     */
 
 
-  .factory('picard', ['$q', '$http', 'picardConfig', function ($q, $http, picardConfig) {
+    .factory('picard', ['$q', '$http', 'picardConfig', function ($q, $http, picardConfig) {
 
-       var baseUrl = picardConfig.base_url;
+        var baseUrl = picardConfig.base_url;
 
         /**
          * @ngdoc function
-         * @name picard.service.picard#generateResponse
+         * @name picard.service.picard#makeHttpRequest
          * @methodOf picard.service.picard
          *
          * @description
@@ -92,14 +92,14 @@ angular
          * @param {Object} [options] HTTP config options.  See usage section here for options https://docs.angularjs.org/api/ng/service/$http
          */
 
-        function generateResponse (method, endpoint, params, options) {
-          if(typeof params != 'object'){
-            params = {}
-          }
-          // Build the $http config object
-          // If options is specified as a parameter then the values
-          // for the fields in the options.config object
-          // will overwrite the defaults.
+        function makeHttpRequest (method, endpoint, params, options) {
+            if(typeof params != 'object'){
+                params = {}
+            }
+            // Build the $http config object
+            // If options is specified as a parameter then the values
+            // for the fields in the options.config object
+            // will overwrite the defaults.
             var opts = angular.extend({}, picardConfig, options || {});
             var http = angular.extend({
                 method: method,
@@ -176,7 +176,7 @@ angular
             return $q.reject(ret);
         }
 
-        // return functions to call generateResponse function
+        // return functions to call makeHttpRequest function
         return {
             /**
              * @ngdoc function
@@ -191,7 +191,7 @@ angular
              * @param {options} [options] http options to override
              */
             get: function (endpoint, params, options) {
-                return generateResponse('GET', endpoint, params, options);
+                return makeHttpRequest('GET', endpoint, params, options);
             },
             /**
              * @ngdoc function
@@ -206,7 +206,7 @@ angular
              * @param {options} [options] http options to override
              */
             post: function (endpoint, params, options) {
-                return generateResponse('POST', endpoint, params, options);
+                return makeHttpRequest('POST', endpoint, params, options);
             },
             /**
              * @ngdoc function
@@ -221,7 +221,7 @@ angular
              * @param {options} [options] http options to override
              */
             put: function (endpoint, params, options) {
-                return generateResponse('PUT', endpoint, params, options);
+                return makeHttpRequest('PUT', endpoint, params, options);
             },
             /**
              * @ngdoc function
@@ -236,10 +236,43 @@ angular
              * @param {options} [options] http options to override
              */
             delete: function (endpoint, params, options){
-                return generateResponse('DELETE', endpoint, params, options);
+                return makeHttpRequest('DELETE', endpoint, params, options);
+            },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#login
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Logs a user in and stashes the session key
+             *
+             * @param {string} name username
+             * @param {string} password user password
+             * @param {boolean} [remember] set to true if you want user session to stay valid for time length specified by
+             * REMEMBER_COOKIE_DURATION config variable.
+             */
+            login: function(username, password, remember){
+                var http_request_params = {
+                    name: username,
+                    password: password,
+                    remember: typeof remember === 'boolean' ? remember: false
+                };
+                return makeHttpRequest('POST', 'auth/login', http_request_params);
+            },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#logout
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Logs a user out.  Does not require any parameters.
+             *
+             */
+            logout: function(){
+                return makeHttpRequest('POST', 'auth/logout');
             }
         };
 
     }
-  ]);
+    ]);
 })();
