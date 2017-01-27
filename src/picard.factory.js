@@ -299,7 +299,7 @@ angular
              * Sends email containing password reset token.
              * <pre>
              *     // sends john@email.com an email with password reset token
-             *     picard.forgotPassord('john@email.com);
+             *     picard.forgotPassord('john@email.com');
              * </pre>
              *
              * @param {string} email user email address

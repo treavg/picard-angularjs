@@ -27,7 +27,7 @@ NG_DOCS={
       "shortName": "picard.service.picard",
       "type": "service",
       "moduleName": "picard",
-      "keywords": "299 angularjs api call called code config create data default delete endpoint entire error false fields fullresponse function functions generateresponse http https internal meaning method modify note object options opts org override parameter parameters params pass picard post preforms promise public range rejection request requests res response returned returns service status success successful true unsuccessful usage valid"
+      "keywords": "09352908510981320985091810329581 17 299 409 account address angularjs api call called code config create creating data default delete email endpoint entire error exists false fields forgotpassord forgotpassword fullresponse function functions http https internal john johnnie jonnie17 key length login logout logs makehttprequest meaning method modify newpassword note object options opts org override parameter parameters params pass password picard post preforms promise public range register registers rejection remember_cookie_duration request requests require res reset resetpasswordbytoken resets response returned returns sends service session set stashes status stay succeeds success successful supersecret12345 susan19 throws time token true unsuccessful usage user username valid variable"
     }
   ],
   "apis": {

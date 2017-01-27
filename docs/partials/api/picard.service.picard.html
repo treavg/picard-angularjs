@@ -21,12 +21,13 @@ the options parameter to the Picard.get call.</p>
 </div></td></tr><tr><td>res</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-error-page"><p>http response</p>
 </div></td></tr></tbody></table></div>
 </li>
-<li><h3 id="methods_generateresponse">generateResponse(method, endpoint, params, [options])</h3>
-<div class="generateresponse"><div class="picard-service-picard-generateresponse-page"><p>Internal function that&#39;s called by public functions to make API requests to Picard.</p>
-</div><h5 id="methods_generateresponse_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-generateresponse-page"><p>Http method (e.g. GET, PUT, POST, DELETE)</p>
-</div></td></tr><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-generateresponse-page"><p>Valid picard endpoint.</p>
-</div></td></tr><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-generateresponse-page"><p>HTTP parameters</p>
-</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-generateresponse-page"><p>HTTP config options.  See usage section here for options <a href="https://docs.angularjs.org/api/ng/service/$http">https://docs.angularjs.org/api/ng/service/$http</a></p>
+<li><h3 id="methods_forgotpassword">forgotPassword(email)</h3>
+<div class="forgotpassword"><div class="picard-service-picard-forgotpassword-page"><p>Sends email containing password reset token.
+<pre class="prettyprint linenums">
+    // sends john@email.com an email with password reset token
+    picard.forgotPassord('john@email.com');
+</pre>
+</div><h5 id="methods_forgotpassword_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-forgotpassword-page"><p>user email address</p>
 </div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="methods_get">get(endpoint, [params], [options])</h3>
@@ -34,6 +35,26 @@ the options parameter to the Picard.get call.</p>
 </div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-get-page"><p>endpoint name (required)</p>
 </div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-get-page"><p>api call request parameters</p>
 </div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-get-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_login">login(name, password, [remember])</h3>
+<div class="login"><div class="picard-service-picard-login-page"><p>Logs a user in and stashes the session key</p>
+</div><h5 id="methods_login_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-login-page"><p>username</p>
+</div></td></tr><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-login-page"><p>user password</p>
+</div></td></tr><tr><td>[remember]</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="picard-service-picard-login-page"><p>set to true if you want user session to stay valid for time length specified by
+REMEMBER_COOKIE_DURATION config variable.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_logout">logout()</h3>
+<div class="logout"><div class="picard-service-picard-logout-page"><p>Logs a user out.  Does not require any parameters.</p>
+</div></div>
+</li>
+<li><h3 id="methods_makehttprequest">makeHttpRequest(method, endpoint, params, [options])</h3>
+<div class="makehttprequest"><div class="picard-service-picard-makehttprequest-page"><p>Internal function that&#39;s called by public functions to make API requests to Picard.</p>
+</div><h5 id="methods_makehttprequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-makehttprequest-page"><p>Http method (e.g. GET, PUT, POST, DELETE)</p>
+</div></td></tr><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-makehttprequest-page"><p>Valid picard endpoint.</p>
+</div></td></tr><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-makehttprequest-page"><p>HTTP parameters</p>
+</div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picard-makehttprequest-page"><p>HTTP config options.  See usage section here for options <a href="https://docs.angularjs.org/api/ng/service/$http">https://docs.angularjs.org/api/ng/service/$http</a></p>
 </div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="methods_post">post(endpoint, [params], [options])</h3>
@@ -48,6 +69,31 @@ the options parameter to the Picard.get call.</p>
 </div><h5 id="methods_put_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-put-page"><p>endpoint name (required)</p>
 </div></td></tr><tr><td>[params]</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="picard-service-picard-put-page"><p>api call request parameters</p>
 </div></td></tr><tr><td>[options]</td><td><a href="" class="label type-hint type-hint-options">options</a></td><td><div class="picard-service-picard-put-page"><p>http options to override</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_register">register(name, password, email)</h3>
+<div class="register"><div class="picard-service-picard-register-page"><p>Registers a new user account
+<pre class="prettyprint linenums">
+    // succeeds in creating new user
+    picard.register('jonnie17', 'superSecret12345', 'john@email.com');
+    // throws 409 as user with username johnnie 17 already exists
+    picard.register('jonnie17', 'superSecret12345', 'john@email.com');
+    // throws 409 as user with email john@email.com already exists
+    picard.register('susan19', 'superSecret12345', 'john@email.com');
+</pre>
+</div><h5 id="methods_register_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-register-page"><p>username</p>
+</div></td></tr><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-register-page"><p>user password</p>
+</div></td></tr><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-register-page"><p>user email address</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_resetpasswordbytoken">resetPasswordByToken(token, password)</h3>
+<div class="resetpasswordbytoken"><div class="picard-service-picard-resetpasswordbytoken-page"><p>Resets user password by their token.
+<pre class="prettyprint linenums">
+    // sends john@email.com an email with password reset token
+    picard.resetPasswordByToken('09352908510981320985091810329581', 'newpassword');
+</pre>
+</div><h5 id="methods_resetpasswordbytoken_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>token</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-resetpasswordbytoken-page"><p>password reset token sent to user email</p>
+</div></td></tr><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picard-resetpasswordbytoken-page"><p>new user password</p>
 </div></td></tr></tbody></table></div>
 </li>
 <li><h3 id="methods_success">success(opts, res)</h3>
