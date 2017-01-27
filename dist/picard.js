@@ -299,6 +299,26 @@ angular
                 };
                 return makeHttpRequest('POST', 'auth/logout', http_request_params);
             },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#forgotPassword
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Sends email containing password reset token.
+             * <pre>
+             *     // sends user an email address
+             *     picard.forgotPassord('john@email.com);
+             * </pre>
+             *
+             * @param {string} email user email address
+             */
+            forgotPassword: function(email){
+                var http_request_params = {
+                    'email': email
+                };
+                return makeHttpRequest('POST', 'auth/logout', http_request_params);
+            }
         };
 
     }
