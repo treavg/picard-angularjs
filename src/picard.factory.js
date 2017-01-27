@@ -65,7 +65,7 @@ angular
        */
 
 
-  .factory('picard', ['$q', '$http', '$window', '$state', 'picardConfig', function ($q, $http, $window, $state, picardConfig) {
+  .factory('picard', ['$q', '$http', 'picardConfig', function ($q, $http, picardConfig) {
 
        var baseUrl = picardConfig.base_url;
 
