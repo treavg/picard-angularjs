@@ -261,8 +261,38 @@ angular
              */
             logout: function(){
                 return makeHttpRequest('POST', 'auth/logout');
-            }
+            },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#register
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Registers a new user account
+             * <pre>
+             *     // succeeds in creating new user
+             *     picard.register('jonnie17', 'superSecret12345', 'john@email.com');
+             *     // throws 409 as user with username johnnie 17 already exists
+             *     picard.register('jonnie17', 'superSecret12345', 'john@email.com');
+             *     // throws 409 as user with email john@email.com already exists
+             *     picard.register('susan19', 'superSecret12345', 'john@email.com');
+             * </pre>
+             *
+             * @param {string} name username
+             * @param {string} password user password
+             * @param {string} email user email address
+             */
+            register: function(name, password, email){
+                var http_request_params = {
+                    'name': name,
+                    'password': password,
+                    'email': email
+                };
+                return makeHttpRequest('POST', 'auth/logout', http_request_params);
+            },
         };
 
     }
     ]);
+
+
