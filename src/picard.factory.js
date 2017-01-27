@@ -298,7 +298,7 @@ angular
              * @description
              * Sends email containing password reset token.
              * <pre>
-             *     // sends user an email address
+             *     // sends john@email.com an email with password reset token
              *     picard.forgotPassord('john@email.com);
              * </pre>
              *
@@ -308,7 +308,29 @@ angular
                 var http_request_params = {
                     'email': email
                 };
-                return makeHttpRequest('POST', 'auth/logout', http_request_params);
+                return makeHttpRequest('POST', 'auth/passwordReset', http_request_params);
+            },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#resetPasswordByToken
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Resets user password by their token.
+             * <pre>
+             *     // sends john@email.com an email with password reset token
+             *     picard.resetPasswordByToken('09352908510981320985091810329581', 'newpassword');
+             * </pre>
+             *
+             * @param {string} token password reset token sent to user email
+             * @param {string} password new user password
+             */
+            resetPasswordByToken: function(token, password){
+                var http_request_params = {
+                    'token': token,
+                    'password': password
+                };
+                return makeHttpRequest('POST', 'auth/passwordUpdatebyToken', http_request_params);
             }
         };
 
