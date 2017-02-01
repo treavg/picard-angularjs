@@ -5,7 +5,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Geoiptool", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardGeoiptool", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 

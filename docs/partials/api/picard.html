@@ -12,7 +12,9 @@ to endpoint parameters.</p>
 <pre class="prettyprint linenums" ng-set-text="index.html" ng-html-wrap-loaded="picardExample angular.js script.js"></pre>
 <script type="text/ng-template" id="index.html">
 <div ng-controller="Ctrl">
-<h3 id="example_stack-information">Stack Information</h3>
+<h3 id="example_stack-information-from-the-get-call">Stack Information from the get call</h3>
+<pre>{{ stack | json}}</pre>
+<h3 id="example_stack-information-from-the-picardadmin-stackgetid-function">Stack Information from the picardAdmin stackGetId function</h3>
 <pre>{{ stack | json}}</pre>
 </script>
 </div>
@@ -29,15 +31,19 @@ angular.module('picardExample', ['picard'])
                }
            })
 // define a controller
-.controller("Ctrl", ['$scope', 'picard',  function($scope, picard){
-               // get the stack id using the picard module
+.controller("Ctrl", ['$scope', 'picard', 'picardAdmin', function($scope, picard, picardAdmin){
+               // get the stack id using the picard get function
                picard.get("/admin/stackId",{}).then(function(res){
                    $scope.stack = res;
                })
+               // get the stack id using the picardAdmin stackGetId function
+               picardAdmin.stackGetid({}).then(function(res){
+                   $scope.stack2 = res;
+               });
            }]);
 </script>
 </div>
-</div><h4 id="example_stack-information_demo">Demo</h4>
+</div><h4 id="example_stack-information-from-the-picardadmin-stackgetid-function_demo">Demo</h4>
 <div class="well doc-example-live animate-container" ng-embed-app="picardExample" ng-set-html="index.html" ng-eval-javascript="script.js"></div>
 </div></div>
 </div>

@@ -23,17 +23,22 @@
                 }
             })
  // define a controller
- .controller("Ctrl", ['$scope', 'picard',  function($scope, picard){
+ .controller("Ctrl", ['$scope', 'picard', 'picardAdmin', function($scope, picard, picardAdmin){
                 // get the stack id using the picard get function
                 picard.get("/admin/stackId",{}).then(function(res){
                     $scope.stack = res;
                 })
-                // get the stack id using the picard
+                // get the stack id using the picardAdmin stackGetId function
+                picardAdmin.stackGetid({}).then(function(res){
+                    $scope.stack2 = res;
+                });
             }]);
  </file>
  <file name="index.html">
  <div ng-controller="Ctrl">
- <h1>Stack Information</h1>
+ <h1>Stack Information from the get call</h1>
+ <pre>{{ stack | json}}</pre>
+ <h1>Stack Information from the picardAdmin stackGetId function</h1>
  <pre>{{ stack | json}}</pre>
  </file>
  </example>

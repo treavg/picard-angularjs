@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "picard",
       "shortDescription": "The picard module provides access to the picard api.  The module consists of multiple services, each of which",
-      "keywords": "$scope access angular api arguments base_url cache call config consists constant controller corresponding ctrl define endpoint expose false fields fullresponse function functions html https io javascript js json module multiple ng-controller objects overview parameters picard picardconfig picardexample res script services set single stack"
+      "keywords": "$scope access angular api arguments base_url cache call config consists constant controller corresponding ctrl define endpoint expose false fields fullresponse function functions html https io javascript js json module multiple ng-controller objects overview parameters picard picardadmin picardconfig picardexample res script services set single stack stack2 stackgetid"
     },
     {
       "section": "api",

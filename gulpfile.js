@@ -46,7 +46,7 @@ gulp.task('connect_ngdocs', function() {
         root: 'docs',
         livereload: false,
         fallback: 'docs/index.html',
-        port: 8083
+        port: 8084
     });
 });
 

@@ -27,17 +27,22 @@
                 }
             })
  // define a controller
- .controller("Ctrl", ['$scope', 'picard',  function($scope, picard){
+ .controller("Ctrl", ['$scope', 'picard', 'picardAdmin', function($scope, picard, picardAdmin){
                 // get the stack id using the picard get function
                 picard.get("/admin/stackId",{}).then(function(res){
                     $scope.stack = res;
                 })
-                // get the stack id using the picard
+                // get the stack id using the picardAdmin stackGetId function
+                picardAdmin.stackGetid({}).then(function(res){
+                    $scope.stack2 = res;
+                });
             }]);
  </file>
  <file name="index.html">
  <div ng-controller="Ctrl">
- <h1>Stack Information</h1>
+ <h1>Stack Information from the get call</h1>
+ <pre>{{ stack | json}}</pre>
+ <h1>Stack Information from the picardAdmin stackGetId function</h1>
  <pre>{{ stack | json}}</pre>
  </file>
  </example>
@@ -53,7 +58,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Admin", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardAdmin", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -559,7 +564,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Auth", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardAuth", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -1966,7 +1971,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Custom", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardCustom", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -2649,7 +2654,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Files", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardFiles", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -2773,7 +2778,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Geoiptool", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardGeoiptool", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -2914,7 +2919,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Hubspot", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardHubspot", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
@@ -3218,7 +3223,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Terms", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardTerms", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 

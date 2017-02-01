@@ -5,7 +5,7 @@ angular.module("picard")
 * @module picard
 * @description 
 */
-.factory("Custom", ["$q", "$http", "picard", function ($q, $http, picard) {
+.factory("picardCustom", ["$q", "$http", "picard", function ($q, $http, picard) {
   return {
 
 
