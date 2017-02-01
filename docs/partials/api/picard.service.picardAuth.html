@@ -1,0 +1,798 @@
+<h1><code ng:non-bindable="">picardAuth</code>
+<div><span class="hint">service in module <code ng:non-bindable="">picard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_apikeycreate">apikeyCreate(object)</h3>
+<div class="apikeycreate"><div class="picard-service-picardauth-apikeycreate-page"><p>Create a new user apikey, or regenerate existing key<br/></p>
+<h4 id="endpoint-br-" id="methods_apikeycreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/apikey<br/></p>
+<h4 id="permissions" id="methods_apikeycreate_permissions">Permissions</h4>
+<p>*fresh session<br/></p>
+<h4 id="usage" id="methods_apikeycreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.apikeyCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_apikeycreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-apikeycreate-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to add apikey to"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_apikeycreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-apikeycreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_apikeydelete">apikeyDelete(object)</h3>
+<div class="apikeydelete"><div class="picard-service-picardauth-apikeydelete-page"><p>Delete a User apikey by user uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_apikeydelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/apikey<br/></p>
+<h4 id="permissions" id="methods_apikeydelete_permissions">Permissions</h4>
+<p>*fresh session<br/></p>
+<h4 id="usage" id="methods_apikeydelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.apikeyDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_apikeydelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-apikeydelete-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to delete apikey for"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_apikeydelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-apikeydelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_apikeyfunctest">apikeyFunctest(object)</h3>
+<div class="apikeyfunctest"><div class="picard-service-picardauth-apikeyfunctest-page"><p>Simple endpoint for testing apikey functionality<br/></p>
+<h4 id="endpoint-br-" id="methods_apikeyfunctest_endpoint">Endpoint: <br/></h4>
+<p>/auth/apikeyTest<br/></p>
+<h4 id="permissions" id="methods_apikeyfunctest_permissions">Permissions</h4>
+<h4 id="usage" id="methods_apikeyfunctest_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.apikeyFunctest(http_request_params)
+</code></pre>
+</div><h5 id="methods_apikeyfunctest_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-apikeyfunctest-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_apikeyget">apikeyGet(object)</h3>
+<div class="apikeyget"><div class="picard-service-picardauth-apikeyget-page"><p>Get a Users apikey by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_apikeyget_endpoint">Endpoint: <br/></h4>
+<p>/auth/apikey<br/></p>
+<h4 id="permissions" id="methods_apikeyget_permissions">Permissions</h4>
+<p>*fresh session<br/></p>
+<h4 id="usage" id="methods_apikeyget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.apikeyGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_apikeyget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-apikeyget-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to get apikey for"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_apikeyget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-apikeyget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_apikeyuserlist">apikeyUserlist(object)</h3>
+<div class="apikeyuserlist"><div class="picard-service-picardauth-apikeyuserlist-page"><p>Lists users with apikeys for running api tests<br/></p>
+<h4 id="endpoint-br-" id="methods_apikeyuserlist_endpoint">Endpoint: <br/></h4>
+<p>/auth/apikeyList<br/></p>
+<h4 id="permissions" id="methods_apikeyuserlist_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_apikeyuserlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.apikeyUserlist(http_request_params)
+</code></pre>
+</div><h5 id="methods_apikeyuserlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-apikeyuserlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailprefget">emailprefGet(object)</h3>
+<div class="emailprefget"><div class="picard-service-picardauth-emailprefget-page"><p>Get a Users email preferences by id.<br/></p>
+<h4 id="endpoint-br-" id="methods_emailprefget_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailpref<br/></p>
+<h4 id="permissions" id="methods_emailprefget_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_emailprefget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailprefGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailprefget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailprefget-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to get email prefs for"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailprefget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailprefget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailprefupdate">emailprefUpdate(object)</h3>
+<div class="emailprefupdate"><div class="picard-service-picardauth-emailprefupdate-page"><p>Add a new user email preferences, or update existing prefs<br/></p>
+<h4 id="endpoint-br-" id="methods_emailprefupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailpref<br/></p>
+<h4 id="permissions" id="methods_emailprefupdate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_emailprefupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailprefUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailprefupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailprefupdate-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to add email prefs for"}|json}}</pre>
+</div></td></tr><tr><td>email_optout <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-emailprefupdate-page"><pre class="">{{{"default": false, "comment": "Flag for indicating user wants to opt out of emails"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailprefupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailprefupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailvalidationcreate">emailvalidationCreate(object)</h3>
+<div class="emailvalidationcreate"><div class="picard-service-picardauth-emailvalidationcreate-page"><p>Create and send an email validation<br/></p>
+<h4 id="endpoint-br-" id="methods_emailvalidationcreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailValidation<br/></p>
+<h4 id="permissions" id="methods_emailvalidationcreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_emailvalidationcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailvalidationCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailvalidationcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailvalidationcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailvalidationdelete">emailvalidationDelete(object)</h3>
+<div class="emailvalidationdelete"><div class="picard-service-picardauth-emailvalidationdelete-page"><p>Delete a email validation token<br/></p>
+<h4 id="endpoint-br-" id="methods_emailvalidationdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailValidation<br/></p>
+<h4 id="permissions" id="methods_emailvalidationdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_emailvalidationdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailvalidationDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailvalidationdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>token</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailvalidationdelete-page"><pre class="">{{{"comment": "Token to delete", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailvalidationdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailvalidationdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailvalidationget">emailvalidationGet(object)</h3>
+<div class="emailvalidationget"><div class="picard-service-picardauth-emailvalidationget-page"><p>Confirm email validation, confirming pair of email and token<br/></p>
+<h4 id="endpoint-br-" id="methods_emailvalidationget_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailValidation<br/></p>
+<h4 id="permissions" id="methods_emailvalidationget_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_emailvalidationget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailvalidationGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailvalidationget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>token</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailvalidationget-page"><pre class="">{{{"comment": "Token to validate", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailvalidationget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailvalidationget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailvalidationlist">emailvalidationList(object)</h3>
+<div class="emailvalidationlist"><div class="picard-service-picardauth-emailvalidationlist-page"><p>Generates list of available email validation tokens, filterable.<br/></p>
+<h4 id="endpoint-br-" id="methods_emailvalidationlist_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailvalidationList<br/></p>
+<h4 id="permissions" id="methods_emailvalidationlist_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_emailvalidationlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailvalidationList(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailvalidationlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailvalidationlist-page"><pre class="">{{{"default": null, "comment": "Query filter for list"}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-emailvalidationlist-page"><pre class="">{{{"default": 10, "comment": "Limit list to x results starting at page"}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-emailvalidationlist-page"><pre class="">{{{"default": 0, "comment": "Page to start on (limit * page is first page returned)"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailvalidationlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailvalidationlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_emailvalidationreset">emailvalidationReset(object)</h3>
+<div class="emailvalidationreset"><div class="picard-service-picardauth-emailvalidationreset-page"><p>Auth Endpoint, reset email validation setting for user, forcing reconfirmation<br/></p>
+<h4 id="endpoint-br-" id="methods_emailvalidationreset_endpoint">Endpoint: <br/></h4>
+<p>/auth/emailValidationReset<br/></p>
+<h4 id="permissions" id="methods_emailvalidationreset_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_emailvalidationreset_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.emailvalidationReset(http_request_params)
+</code></pre>
+</div><h5 id="methods_emailvalidationreset_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email_validation_reset <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-emailvalidationreset-page"><pre class="">{{{"comment": "Flag if user needs to validate email", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-emailvalidationreset-page"><pre class="">{{{"comment": "User uuid to change", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_emailvalidationreset_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-emailvalidationreset-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getoauthuseraccount">getOauthuseraccount(object)</h3>
+<div class="getoauthuseraccount"><div class="picard-service-picardauth-getoauthuseraccount-page"><p>Gets user account.<br/></p>
+<h4 id="endpoint-br-" id="methods_getoauthuseraccount_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthUser<br/></p>
+<h4 id="permissions" id="methods_getoauthuseraccount_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_getoauthuseraccount_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.getOauthuseraccount(http_request_params)
+</code></pre>
+</div><h5 id="methods_getoauthuseraccount_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>provider_name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-getoauthuseraccount-page"><pre class="">{{{"comment": "Name of provider to create", "minlength": 1, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-getoauthuseraccount-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to get.  Non-admin users can only access their own objects."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_getoauthuseraccount_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-getoauthuseraccount-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_grouplist">groupList(object)</h3>
+<div class="grouplist"><div class="picard-service-picardauth-grouplist-page"><p>Auth Endpoint, gets list of user groups<br/></p>
+<h4 id="endpoint-br-" id="methods_grouplist_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroupList<br/></p>
+<h4 id="permissions" id="methods_grouplist_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_grouplist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.groupList(http_request_params)
+</code></pre>
+</div><h5 id="methods_grouplist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-grouplist-page"><pre class="">{{{"default": null, "comment": "Filter group list by name or description", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-grouplist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-grouplist-page"><pre class="">{{{"default": 10, "comment": "Limit number of responses", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-grouplist-page"><pre class="">{{{"default": "name", "comment": "Column to sort results on", "setdefault": true, "in": ["name", "description"]}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-grouplist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc", "setdefault": true, "in": ["asc", "desc"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_grouplist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-grouplist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_login">login(object)</h3>
+<div class="login"><div class="picard-service-picardauth-login-page"><p>Logs user in, creating a session<br/></p>
+<h4 id="endpoint-br-" id="methods_login_endpoint">Endpoint: <br/></h4>
+<p>/auth/login<br/></p>
+<h4 id="permissions" id="methods_login_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_login_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.login(http_request_params)
+</code></pre>
+</div><h5 id="methods_login_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-login-page"><pre class="">{{{"comment": "User cleartext password to check against", "minlength": 1, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-login-page"><pre class="">{{{"comment": "User name to log in", "minlength": 1, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>remember <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-login-page"><pre class="">{{{"default": false, "comment": "Flag to indicate if user wants session to extend beyond expiration", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_login_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-login-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_logout">logout(object)</h3>
+<div class="logout"><div class="picard-service-picardauth-logout-page"><p>Logs user out, invalidating local session<br/></p>
+<h4 id="endpoint-br-" id="methods_logout_endpoint">Endpoint: <br/></h4>
+<p>/auth/logout<br/></p>
+<h4 id="permissions" id="methods_logout_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_logout_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.logout(http_request_params)
+</code></pre>
+</div><h5 id="methods_logout_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-logout-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthauthorize">oauthAuthorize(object)</h3>
+<div class="oauthauthorize"><div class="picard-service-picardauth-oauthauthorize-page"><p>Logs user in via oauth provider, returns redirect to verification link<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthauthorize_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthAuthorize/<provider><br/></p>
+<h4 id="permissions" id="methods_oauthauthorize_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_oauthauthorize_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthAuthorize(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthauthorize_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthauthorize-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthcallback">oauthCallback(object)</h3>
+<div class="oauthcallback"><div class="picard-service-picardauth-oauthcallback-page"><h4 id="endpoint-br-" id="methods_oauthcallback_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthCallback/<provider><br/></p>
+<h4 id="permissions" id="methods_oauthcallback_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_oauthcallback_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthCallback(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthcallback_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>code</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthcallback-page"><pre class="">{{{"comment": "Callback code obtained from provider."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthcallback_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthcallback-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthrevoke">oauthRevoke(object)</h3>
+<div class="oauthrevoke"><div class="picard-service-picardauth-oauthrevoke-page"><p>Revokes access to oauth provider.<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthrevoke_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthRevoke/<provider><br/></p>
+<h4 id="permissions" id="methods_oauthrevoke_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_oauthrevoke_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthRevoke(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthrevoke_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthrevoke-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthprovidercreate">oauthproviderCreate(object)</h3>
+<div class="oauthprovidercreate"><div class="picard-service-picardauth-oauthprovidercreate-page"><p>Adds new oauthprovider<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthprovidercreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthprovider<br/></p>
+<h4 id="permissions" id="methods_oauthprovidercreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthprovidercreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthprovidercreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>client_secret</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovidercreate-page"><pre class="">{{{"comment": "Client secret for oauthprovider.", "required": true, "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovidercreate-page"><pre class="">{{{"comment": "Namstarte of provider to create.", "minlength": 1, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>client_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovidercreate-page"><pre class="">{{{"comment": "Client id for oauthprovider.", "required": true, "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>extras</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardauth-oauthprovidercreate-page"><pre class="">{{{"default": {}, "comment": "Extra credentials for oauthprovider in json."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthprovidercreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthprovidercreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthproviderdelete">oauthproviderDelete(object)</h3>
+<div class="oauthproviderdelete"><div class="picard-service-picardauth-oauthproviderdelete-page"><p>Delete a oauthprovider by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthproviderdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthprovider<br/></p>
+<h4 id="permissions" id="methods_oauthproviderdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthproviderdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthproviderdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderdelete-page"><pre class="">{{{"comment": "Oauthprovider uuid to delete", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthproviderdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthproviderdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthproviderget">oauthproviderGet(object)</h3>
+<div class="oauthproviderget"><div class="picard-service-picardauth-oauthproviderget-page"><p>Get oauthprovider by oauthprovider uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthproviderget_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthprovider<br/></p>
+<h4 id="permissions" id="methods_oauthproviderget_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthproviderget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthproviderget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderget-page"><pre class="">{{{"comment": "Oauthprovider name to retrieve."}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderget-page"><pre class="">{{{"comment": "Oauthprovider uuid to retrieve.", "oneof": ["name", "id"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthproviderget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthproviderget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthproviderlist">oauthproviderList(object)</h3>
+<div class="oauthproviderlist"><div class="picard-service-picardauth-oauthproviderlist-page"><p>Auth Endpoint, gets list of oauthproviders, filterable<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthproviderlist_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthproviderList<br/></p>
+<h4 id="permissions" id="methods_oauthproviderlist_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthproviderlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderList(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthproviderlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><pre class="">{{{"default": null, "comment": "Filter user list by start of name"}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)"}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><pre class="">{{{"default": 20, "comment": "Limit number of responses"}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><pre class="">{{{"default": "created", "comment": "Column to sort results on", "in": ["name", "client_id", "client_secret", "extras"]}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthproviderlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthproviderlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthproviderlistunconfigured">oauthproviderListunconfigured(object)</h3>
+<div class="oauthproviderlistunconfigured"><div class="picard-service-picardauth-oauthproviderlistunconfigured-page"><p>Auth Endpoint, gets list of unconfigured oauth providers<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthproviderlistunconfigured_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthproviderListunconfigured<br/></p>
+<h4 id="permissions" id="methods_oauthproviderlistunconfigured_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthproviderlistunconfigured_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderListunconfigured(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthproviderlistunconfigured_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthproviderlistunconfigured-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthproviderupdate">oauthproviderUpdate(object)</h3>
+<div class="oauthproviderupdate"><div class="picard-service-picardauth-oauthproviderupdate-page"><p>Modify a oauthprovider by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthproviderupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthprovider<br/></p>
+<h4 id="permissions" id="methods_oauthproviderupdate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_oauthproviderupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthproviderupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><pre class="">{{{"comment": "UUID of Oauthprovider", "required": true}|json}}</pre>
+</div></td></tr><tr><td>client_secret</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><pre class="">{{{"default": null, "comment": "Client secret of oauthprovider", "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>extras</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><pre class="">{{{"default": {}, "comment": "Extra credentials for oauthprovider in json"}|json}}</pre>
+</div></td></tr><tr><td>client_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><pre class="">{{{"default": null, "comment": "Client id of oauthprovider", "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><pre class="">{{{"default": null, "comment": "Name of oauthprovider", "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthproviderupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthproviderupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_oauthprovideruserlist">oauthproviderUserlist(object)</h3>
+<div class="oauthprovideruserlist"><div class="picard-service-picardauth-oauthprovideruserlist-page"><p>Auth Endpoint, gets list of oauthproviders that are configured for user use, filterable<br/></p>
+<h4 id="endpoint-br-" id="methods_oauthprovideruserlist_endpoint">Endpoint: <br/></h4>
+<p>/auth/oauthproviderUserlist<br/></p>
+<h4 id="permissions" id="methods_oauthprovideruserlist_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_oauthprovideruserlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.oauthproviderUserlist(http_request_params)
+</code></pre>
+</div><h5 id="methods_oauthprovideruserlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><pre class="">{{{"default": null, "comment": "Filter oauth user list by start of provider name"}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)"}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><pre class="">{{{"default": 20, "comment": "Limit number of responses"}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><pre class="">{{{"default": "created", "comment": "Column to sort results on", "in": ["name", "client_id", "client_secret", "extras"]}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_oauthprovideruserlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-oauthprovideruserlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_passwordupdate">passwordUpdate(object)</h3>
+<div class="passwordupdate"><div class="picard-service-picardauth-passwordupdate-page"><p>Auth Endpoint, change user password<br/></p>
+<h4 id="endpoint-br-" id="methods_passwordupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/passwordUpdate<br/></p>
+<h4 id="permissions" id="methods_passwordupdate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_passwordupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.passwordUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_passwordupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>newpassword</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordupdate-page"><pre class="">{{{"comment": "New password.  Minimum length requirement can be specified through the PASSWORD_MIN_LENGTH global app config.  Default is 6.", "required": true}|json}}</pre>
+</div></td></tr><tr><td>oldpassword</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordupdate-page"><pre class="">{{{"comment": "Oldpassword"}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordupdate-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to change"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_passwordupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-passwordupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_passwordupdatebytoken">passwordUpdatebytoken(object)</h3>
+<div class="passwordupdatebytoken"><div class="picard-service-picardauth-passwordupdatebytoken-page"><p>Auth Endpoint, resets password by reset token. Used for forgot-my-password functionality.<br/></p>
+<h4 id="endpoint-br-" id="methods_passwordupdatebytoken_endpoint">Endpoint: <br/></h4>
+<p>/auth/passwordUpdatebyToken<br/></p>
+<h4 id="permissions" id="methods_passwordupdatebytoken_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_passwordupdatebytoken_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.passwordUpdatebytoken(http_request_params)
+</code></pre>
+</div><h5 id="methods_passwordupdatebytoken_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordupdatebytoken-page"><pre class="">{{{"comment": "New password, must be at least app.config[\"PASSWORD_MIN_LENGTH\"] characters in length", "required": true}|json}}</pre>
+</div></td></tr><tr><td>token</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordupdatebytoken-page"><pre class="">{{{"comment": "Password reset token"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_passwordupdatebytoken_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-passwordupdatebytoken-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_passwordresetcreate">passwordresetCreate(object)</h3>
+<div class="passwordresetcreate"><div class="picard-service-picardauth-passwordresetcreate-page"><p>Create a new user password reset token and email.  This overwrites any existing tokens for this user.<br/></p>
+<h4 id="endpoint-br-" id="methods_passwordresetcreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/passwordReset<br/></p>
+<h4 id="permissions" id="methods_passwordresetcreate_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_passwordresetcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.passwordresetCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_passwordresetcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordresetcreate-page"><pre class="">{{{"comment": "User email to create password reset for", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_passwordresetcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-passwordresetcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_passwordresetdelete">passwordresetDelete(object)</h3>
+<div class="passwordresetdelete"><div class="picard-service-picardauth-passwordresetdelete-page"><p>Delete a user password reset token by token<br/></p>
+<h4 id="endpoint-br-" id="methods_passwordresetdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/passwordReset<br/></p>
+<h4 id="permissions" id="methods_passwordresetdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_passwordresetdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.passwordresetDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_passwordresetdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>token</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-passwordresetdelete-page"><pre class="">{{{"comment": "Password token uuid to delete", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_passwordresetdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-passwordresetdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_pgpkeycreate">pgpkeyCreate(object)</h3>
+<div class="pgpkeycreate"><div class="picard-service-picardauth-pgpkeycreate-page"><p>Add or update pgpkey on a user<br/></p>
+<h4 id="endpoint-br-" id="methods_pgpkeycreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/pgpkey<br/></p>
+<h4 id="permissions" id="methods_pgpkeycreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_pgpkeycreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.pgpkeyCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_pgpkeycreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pgpkey</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-pgpkeycreate-page"><pre class="">{{{"comment": "Ascii armored pgp key to add, requires proper formatting to be maintained, per https://www.gnupg.org/gph/en/manual/x56.html.", "minlength": 1, "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-pgpkeycreate-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to add pgpkey to"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_pgpkeycreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-pgpkeycreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_pgpkeydelete">pgpkeyDelete(object)</h3>
+<div class="pgpkeydelete"><div class="picard-service-picardauth-pgpkeydelete-page"><p>Delete a users pgpkey by id<br/></p>
+<h4 id="endpoint-br-" id="methods_pgpkeydelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/pgpkey<br/></p>
+<h4 id="permissions" id="methods_pgpkeydelete_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_pgpkeydelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.pgpkeyDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_pgpkeydelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-pgpkeydelete-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to delete pgpkey from"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_pgpkeydelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-pgpkeydelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_pgpkeyget">pgpkeyGet(object)</h3>
+<div class="pgpkeyget"><div class="picard-service-picardauth-pgpkeyget-page"><p>Get a users pgpkey by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_pgpkeyget_endpoint">Endpoint: <br/></h4>
+<p>/auth/pgpkey<br/></p>
+<h4 id="permissions" id="methods_pgpkeyget_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_pgpkeyget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.pgpkeyGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_pgpkeyget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-pgpkeyget-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to get pgpkey for"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_pgpkeyget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-pgpkeyget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_regauthcheckdectest">regAuthcheckdectest(object)</h3>
+<div class="regauthcheckdectest"><div class="picard-service-picardauth-regauthcheckdectest-page"><p>Auth Endpoint, tests that logged in user can pass registered auth checks<br/></p>
+<h4 id="endpoint-br-" id="methods_regauthcheckdectest_endpoint">Endpoint: <br/></h4>
+<p>/auth/regAuthChecksTest<br/></p>
+<h4 id="permissions" id="methods_regauthcheckdectest_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_regauthcheckdectest_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.regAuthcheckdectest(http_request_params)
+</code></pre>
+</div><h5 id="methods_regauthcheckdectest_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-regauthcheckdectest-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_rolecreate">roleCreate(object)</h3>
+<div class="rolecreate"><div class="picard-service-picardauth-rolecreate-page"><p>Adds new role<br/></p>
+<h4 id="endpoint-br-" id="methods_rolecreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/role<br/></p>
+<h4 id="permissions" id="methods_rolecreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_rolecreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_rolecreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-rolecreate-page"><pre class="">{{{"comment": "Role name to create", "minlength": 1, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-rolecreate-page"><pre class="">{{{"default": "", "comment": "Description of role", "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_rolecreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-rolecreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_roledelete">roleDelete(object)</h3>
+<div class="roledelete"><div class="picard-service-picardauth-roledelete-page"><p>Delete a role by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_roledelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/role<br/></p>
+<h4 id="permissions" id="methods_roledelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_roledelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_roledelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roledelete-page"><pre class="">{{{"comment": "Role id to delete", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roledelete-page"><pre class="">{{{"comment": "Role name to delete"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_roledelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-roledelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_roleget">roleGet(object)</h3>
+<div class="roleget"><div class="picard-service-picardauth-roleget-page"><p>Get role by role uuid or name.  Optionally can return user auth models for users in the desired role.<br/></p>
+<h4 id="endpoint-br-" id="methods_roleget_endpoint">Endpoint: <br/></h4>
+<p>/auth/role<br/></p>
+<h4 id="permissions" id="methods_roleget_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_roleget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_roleget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleget-page"><pre class="">{{{"comment": "Role id to retrieve", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleget-page"><pre class="">{{{"comment": "Role name to retrieve"}|json}}</pre>
+</div></td></tr><tr><td>full</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardauth-roleget-page"><pre class="">{{{"default": true, "comment": "flag to determine if list of users in role should be returned.  Defaults to true."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_roleget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-roleget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_rolelist">roleList(object)</h3>
+<div class="rolelist"><div class="picard-service-picardauth-rolelist-page"><p>Gets list of roles<br/></p>
+<h4 id="endpoint-br-" id="methods_rolelist_endpoint">Endpoint: <br/></h4>
+<p>/auth/roleList<br/></p>
+<h4 id="permissions" id="methods_rolelist_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_rolelist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleList(http_request_params)
+</code></pre>
+</div><h5 id="methods_rolelist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-rolelist-page"><pre class="">{{{"default": null, "comment": "Filter role list by name or description", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-rolelist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-rolelist-page"><pre class="">{{{"default": 10, "comment": "Limit number of responses", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-rolelist-page"><pre class="">{{{"default": "name", "comment": "Column to sort results on", "setdefault": true, "in": ["name", "description"]}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-rolelist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc", "setdefault": true, "in": ["asc", "desc"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_rolelist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-rolelist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_roleupdate">roleUpdate(object)</h3>
+<div class="roleupdate"><div class="picard-service-picardauth-roleupdate-page"><p>Modify a role by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_roleupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/role<br/></p>
+<h4 id="permissions" id="methods_roleupdate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_roleupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_roleupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleupdate-page"><pre class="">{{{"comment": "Role id to modify", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleupdate-page"><pre class="">{{{"comment": "Role name to update"}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleupdate-page"><pre class="">{{{"default": "", "comment": "Description of role", "required": true, "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_roleupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-roleupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_roleusercreate">roleuserCreate(object)</h3>
+<div class="roleusercreate"><div class="picard-service-picardauth-roleusercreate-page"><p>Add a user to a role, by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_roleusercreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/roleUser<br/></p>
+<h4 id="permissions" id="methods_roleusercreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_roleusercreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleuserCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_roleusercreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>user_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleusercreate-page"><pre class="">{{{"comment": "User uuid to add to role", "required": true}|json}}</pre>
+</div></td></tr><tr><td>role_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleusercreate-page"><pre class="">{{{"comment": "Role id to add user to", "oneof": ["role_id", "role_name"]}|json}}</pre>
+</div></td></tr><tr><td>role_name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleusercreate-page"><pre class="">{{{"comment": "Role name to add user to"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_roleusercreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-roleusercreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_roleuserdelete">roleuserDelete(object)</h3>
+<div class="roleuserdelete"><div class="picard-service-picardauth-roleuserdelete-page"><p>Remove user from a role, by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_roleuserdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/roleUser<br/></p>
+<h4 id="permissions" id="methods_roleuserdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_roleuserdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.roleuserDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_roleuserdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>user_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleuserdelete-page"><pre class="">{{{"comment": "User uuid to remove from role", "required": true}|json}}</pre>
+</div></td></tr><tr><td>role_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleuserdelete-page"><pre class="">{{{"comment": "Role id to remove user from", "oneof": ["role_id", "role_name"]}|json}}</pre>
+</div></td></tr><tr><td>role_name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-roleuserdelete-page"><pre class="">{{{"comment": "Role name to remove user from"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_roleuserdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-roleuserdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_useractiveupdate">userActiveupdate(object)</h3>
+<div class="useractiveupdate"><div class="picard-service-picardauth-useractiveupdate-page"><p>Auth Endpoint, set user active or deactive<br/></p>
+<h4 id="endpoint-br-" id="methods_useractiveupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/userActiveUpdate<br/></p>
+<h4 id="permissions" id="methods_useractiveupdate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_useractiveupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userActiveupdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_useractiveupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>active <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-useractiveupdate-page"><pre class="">{{{"comment": "Flag if user is active", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-useractiveupdate-page"><pre class="">{{{"comment": "User uuid to change", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_useractiveupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-useractiveupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usercreate">userCreate(object)</h3>
+<div class="usercreate"><div class="picard-service-picardauth-usercreate-page"><p>Creates a user. If config USER_CREATION_METHOD is set to &quot;user&quot;, users are able to self register. If set to admin, only admins can create accounts.<br/></p>
+<h4 id="endpoint-br-" id="methods_usercreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/user<br/></p>
+<h4 id="permissions" id="methods_usercreate_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_usercreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_usercreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>password</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usercreate-page"><pre class="">{{{"comment": "Cleartext password of user.", "minlength": 1, "oneof": ["password", "random_password"], "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>random_password <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-usercreate-page"><pre class="">{{{"default": false, "comment": "Generate random password and send to user in welcome email.  Requires USER_CREATION_METHOD be set to admin."}|json}}</pre>
+</div></td></tr><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usercreate-page"><pre class="">{{{"comment": "New user email address.", "minlength": 7, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usercreate-page"><pre class="">{{{"comment": "Username for new user.  This cannot be changed.", "minlength": 4, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>send_welcome <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-usercreate-page"><pre class="">{{{"default": true, "comment": "Flag to send welcome email with username to user. Always true if random password is generated."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usercreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usercreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_userdelete">userDelete(object)</h3>
+<div class="userdelete"><div class="picard-service-picardauth-userdelete-page"><p>Deletes a user account<br/></p>
+<h4 id="endpoint-br-" id="methods_userdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/user<br/></p>
+<h4 id="permissions" id="methods_userdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_userdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_userdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userdelete-page"><pre class="">{{{"comment": "User uuid of user to delete", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_userdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-userdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_userget">userGet(object)</h3>
+<div class="userget"><div class="picard-service-picardauth-userget-page"><p>Gets a users object by uuid.  Users not in the admin group will get permission denied errors if they try to access a different users uuid.<br/></p>
+<h4 id="endpoint-br-" id="methods_userget_endpoint">Endpoint: <br/></h4>
+<p>/auth/user<br/></p>
+<h4 id="permissions" id="methods_userget_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_userget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_userget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userget-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to get.  Non-admin users can only access their own objects.", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_userget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-userget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_useridentitytest">userIdentitytest(object)</h3>
+<div class="useridentitytest"><div class="picard-service-picardauth-useridentitytest-page"><p>Gets user identity info of calling user for testing.<br/></p>
+<h4 id="endpoint-br-" id="methods_useridentitytest_endpoint">Endpoint: <br/></h4>
+<p>/auth/userIdentityTest<br/></p>
+<h4 id="permissions" id="methods_useridentitytest_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_useridentitytest_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userIdentitytest(http_request_params)
+</code></pre>
+</div><h5 id="methods_useridentitytest_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-useridentitytest-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_userlist">userList(object)</h3>
+<div class="userlist"><div class="picard-service-picardauth-userlist-page"><p>Auth Endpoint, gets list of users in group users, filterable<br/></p>
+<h4 id="endpoint-br-" id="methods_userlist_endpoint">Endpoint: <br/></h4>
+<p>/auth/userList<br/></p>
+<h4 id="permissions" id="methods_userlist_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_userlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userList(http_request_params)
+</code></pre>
+</div><h5 id="methods_userlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": null, "comment": "Filter user list by start of name"}|json}}</pre>
+</div></td></tr><tr><td>role</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": null, "comment": "Role to filter based on user membership", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": 20, "comment": "Limit number of responses", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userlist-page"><pre class="">{{{"default": "created", "comment": "Column to sort results on", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_userlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-userlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_userpasswordchangeset">userPasswordchangeset(object)</h3>
+<div class="userpasswordchangeset"><div class="picard-service-picardauth-userpasswordchangeset-page"><p>Auth Endpoint, set users flag to require password change on next api call<br/></p>
+<h4 id="endpoint-br-" id="methods_userpasswordchangeset_endpoint">Endpoint: <br/></h4>
+<p>/auth/userPasswordChangeSet<br/></p>
+<h4 id="permissions" id="methods_userpasswordchangeset_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_userpasswordchangeset_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userPasswordchangeset(http_request_params)
+</code></pre>
+</div><h5 id="methods_userpasswordchangeset_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>password_change_nextlogin <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardauth-userpasswordchangeset-page"><pre class="">{{{"comment": "Flag if user needs to change password on next login", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userpasswordchangeset-page"><pre class="">{{{"comment": "User uuid to change", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_userpasswordchangeset_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-userpasswordchangeset-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_userupdate">userUpdate(object)</h3>
+<div class="userupdate"><div class="picard-service-picardauth-userupdate-page"><p>Updates an existing users email address, by uuid.<br/></p>
+<h4 id="endpoint-br-" id="methods_userupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/user<br/></p>
+<h4 id="permissions" id="methods_userupdate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_userupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.userUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_userupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userupdate-page"><pre class="">{{{"comment": "User ID of user to update", "required": true}|json}}</pre>
+</div></td></tr><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-userupdate-page"><pre class="">{{{"default": null, "comment": "User email to update"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_userupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-userupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupcreate">usergroupCreate(object)</h3>
+<div class="usergroupcreate"><div class="picard-service-picardauth-usergroupcreate-page"><p>Adds new usergroup<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupcreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroup<br/></p>
+<h4 id="permissions" id="methods_usergroupcreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_usergroupcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupcreate-page"><pre class="">{{{"comment": "Usergroup name to create", "minlength": 1, "required": true, "maxlength": 64}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupcreate-page"><pre class="">{{{"default": "", "comment": "Description of usergroup", "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupdelete">usergroupDelete(object)</h3>
+<div class="usergroupdelete"><div class="picard-service-picardauth-usergroupdelete-page"><p>Delete a usergroup by uuid<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroup<br/></p>
+<h4 id="permissions" id="methods_usergroupdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_usergroupdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupdelete-page"><pre class="">{{{"comment": "Usergroup id to delete", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupdelete-page"><pre class="">{{{"comment": "Usergroup name to delete"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupget">usergroupGet(object)</h3>
+<div class="usergroupget"><div class="picard-service-picardauth-usergroupget-page"><p>Get usergroup by id or name<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupget_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroup<br/></p>
+<h4 id="permissions" id="methods_usergroupget_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_usergroupget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupget-page"><pre class="">{{{"comment": "Usergroup id to retrieve", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupget-page"><pre class="">{{{"comment": "Usergroup name to retrieve"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupupdate">usergroupUpdate(object)</h3>
+<div class="usergroupupdate"><div class="picard-service-picardauth-usergroupupdate-page"><p>Modify a usergroup by id or name<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupupdate_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroup<br/></p>
+<h4 id="permissions" id="methods_usergroupupdate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_usergroupupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupupdate-page"><pre class="">{{{"comment": "Usergroup id to modify", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupupdate-page"><pre class="">{{{"comment": "Usergroup name to modify"}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupupdate-page"><pre class="">{{{"default": null, "comment": "Description of usergroup", "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupmembercreate">usergroupmemberCreate(object)</h3>
+<div class="usergroupmembercreate"><div class="picard-service-picardauth-usergroupmembercreate-page"><p>Adds member to usergroup<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupmembercreate_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroupMember<br/></p>
+<h4 id="permissions" id="methods_usergroupmembercreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_usergroupmembercreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupmemberCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupmembercreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>member</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmembercreate-page"><pre class="">{{{"comment": "Member id to add", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmembercreate-page"><pre class="">{{{"comment": "Usergroup id to add member to", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmembercreate-page"><pre class="">{{{"comment": "Usergroup name to add member to"}|json}}</pre>
+</div></td></tr><tr><td>owner</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmembercreate-page"><pre class="">{{{"comment": "Owner id, optional, for admin user only"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupmembercreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupmembercreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupmemberdelete">usergroupmemberDelete(object)</h3>
+<div class="usergroupmemberdelete"><div class="picard-service-picardauth-usergroupmemberdelete-page"><p>Deletes a member from usergroup by id<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupmemberdelete_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroupMember<br/></p>
+<h4 id="permissions" id="methods_usergroupmemberdelete_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_usergroupmemberdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupmemberDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupmemberdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>member</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberdelete-page"><pre class="">{{{"comment": "Usergroup member to delete by id", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberdelete-page"><pre class="">{{{"comment": "Usergroup id to delete", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberdelete-page"><pre class="">{{{"comment": "Usergroup name to delete"}|json}}</pre>
+</div></td></tr><tr><td>owner</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberdelete-page"><pre class="">{{{"comment": "Usergroup owner (optional)"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupmemberdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupmemberdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usergroupmemberget">usergroupmemberGet(object)</h3>
+<div class="usergroupmemberget"><div class="picard-service-picardauth-usergroupmemberget-page"><p>Gets a list of members in a usergroup for owner<br/></p>
+<h4 id="endpoint-br-" id="methods_usergroupmemberget_endpoint">Endpoint: <br/></h4>
+<p>/auth/usergroupMember<br/></p>
+<h4 id="permissions" id="methods_usergroupmemberget_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_usergroupmemberget_usage">Usage</h4>
+<pre><code class="lang-js"> picardAuth.usergroupmemberGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_usergroupmemberget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberget-page"><pre class="">{{{"comment": "Usergroup id to add member to", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberget-page"><pre class="">{{{"comment": "Usergroup name to add member to"}|json}}</pre>
+</div></td></tr><tr><td>owner</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardauth-usergroupmemberget-page"><pre class="">{{{"comment": "Usergroup owner id (optional, assume calling user)"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usergroupmemberget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardauth-usergroupmemberget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

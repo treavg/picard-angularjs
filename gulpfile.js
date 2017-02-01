@@ -52,9 +52,27 @@ gulp.task('connect_ngdocs', function() {
 
 gulp.task('ngdocs', [], function () {
   var gulpDocs = require('gulp-ngdocs');
-  return gulp.src('src/*.js')
-      .pipe(gulpDocs.process())
-      .pipe(gulp.dest('./docs'));
+  var options = {
+    title: 'Picard API Documentation'
+
+  };
+  //return gulpDocs.sections({
+  //    api: {
+  //        glob:['src/picard.module.js', 'src/picard.factory.js'],
+  //        api: true,
+  //        title: 'API Internal'
+  //    },
+  //    admin: {
+  //        glob:['src/admin.js'],
+  //        api: true,
+  //        title: 'Admin Module'
+  //    },
+  //    auth: {
+  //        glob:['src/auth.js'],
+  //        api: true,
+  //        title: 'Auth Module'
+  //    }})
+    return gulp.src('src/*.js').pipe(gulpDocs.process(options)).pipe(gulp.dest('./docs'));
 });
 
 gulp.task('watch', function () {

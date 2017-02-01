@@ -1,0 +1,79 @@
+<h1><code ng:non-bindable="">picardFiles</code>
+<div><span class="hint">service in module <code ng:non-bindable="">picard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_deletefiles">deleteFiles(object)</h3>
+<div class="deletefiles"><div class="picard-service-picardfiles-deletefiles-page"><p>Deletes all files associated with document or doctype.<br/></p>
+<h4 id="endpoint-br-" id="methods_deletefiles_endpoint">Endpoint: <br/></h4>
+<p>/files/deleteFiles<br/></p>
+<h4 id="permissions" id="methods_deletefiles_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_deletefiles_usage">Usage</h4>
+<pre><code class="lang-js"> picardFiles.deleteFiles(http_request_params)
+</code></pre>
+</div><h5 id="methods_deletefiles_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>document_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-deletefiles-page"><pre class="">{{{"comment": "Document id.", "oneof": ["document_id", "doctype_id"]}|json}}</pre>
+</div></td></tr><tr><td>doctype_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-deletefiles-page"><pre class="">{{{"comment": "Doctype id."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_deletefiles_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardfiles-deletefiles-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_filedelete">fileDelete(object)</h3>
+<div class="filedelete"><div class="picard-service-picardfiles-filedelete-page"><p>Deletes document linked file<br/></p>
+<h4 id="endpoint-br-" id="methods_filedelete_endpoint">Endpoint: <br/></h4>
+<p>/files/file<br/></p>
+<h4 id="permissions" id="methods_filedelete_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_filedelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardFiles.fileDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_filedelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>filename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filedelete-page"><pre class="">{{{"comment": "Filename to delete", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filedelete-page"><pre class="">{{{"default": null, "comment": "Document UUID to delete file from", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filedelete-page"><pre class="">{{{"default": null, "comment": "Name of document to delete file from"}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filedelete-page"><pre class="">{{{"default": null, "comment": "UUID of doctype for document to delete file from"}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filedelete-page"><pre class="">{{{"default": null, "comment": "Name of doctype of document to delete file from"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_filedelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardfiles-filedelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_filegetdownloadurl">fileGetdownloadurl(object)</h3>
+<div class="filegetdownloadurl"><div class="picard-service-picardfiles-filegetdownloadurl-page"><p>Get a custom document linked file from the filestore.  Does notrequire a valid user to enable downloads from documents with publicread permissions.<br/></p>
+<h4 id="endpoint-br-" id="methods_filegetdownloadurl_endpoint">Endpoint: <br/></h4>
+<p>/files/file<br/></p>
+<h4 id="permissions" id="methods_filegetdownloadurl_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_filegetdownloadurl_usage">Usage</h4>
+<pre><code class="lang-js"> picardFiles.fileGetdownloadurl(http_request_params)
+</code></pre>
+</div><h5 id="methods_filegetdownloadurl_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>filename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"comment": "Filename to get", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"default": null, "comment": "Document UUID to attach file to", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"default": null, "comment": "Name of document to get file from", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"default": null, "comment": "UUID of doctype for document to get file from", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"default": null, "comment": "Name of doctype of document", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>credentials</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><pre class="">{{{"default": false, "comment": "Boolean indicating whether user wants federation token.", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_filegetdownloadurl_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardfiles-filegetdownloadurl-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_filegetuploadurl">fileGetuploadurl(object)</h3>
+<div class="filegetuploadurl"><div class="picard-service-picardfiles-filegetuploadurl-page"><p>Uploads a file to link into a document<br/></p>
+<h4 id="endpoint-br-" id="methods_filegetuploadurl_endpoint">Endpoint: <br/></h4>
+<p>/files/file<br/></p>
+<h4 id="permissions" id="methods_filegetuploadurl_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_filegetuploadurl_usage">Usage</h4>
+<pre><code class="lang-js"> picardFiles.fileGetuploadurl(http_request_params)
+</code></pre>
+</div><h5 id="methods_filegetuploadurl_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>filename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"comment": "Filename to attach to document", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": null, "comment": "Document UUID to attach file to", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": null, "comment": "Name of document to attach file to"}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": null, "comment": "UUID of doctype of document to attach file to"}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": null, "comment": "Name of doctype of document to attach file to"}|json}}</pre>
+</div></td></tr><tr><td>contenttype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": null, "comment": "File content type.  If not defined then file suffix must be one of .xls, .xlsx, .tsv, .json, .png, .jpg or .jpeg.  If the suffix is different thenplease provide the valid content-type.  Here is a useful link: http://www.freeformatter.com/mime-types-list.html"}|json}}</pre>
+</div></td></tr><tr><td>credentials</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><pre class="">{{{"default": false, "comment": "Boolean indicating whether user wants federation token."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_filegetuploadurl_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardfiles-filegetuploadurl-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

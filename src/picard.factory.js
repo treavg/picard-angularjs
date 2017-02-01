@@ -1,14 +1,25 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name picard
- *
- * @description
- * picard module provides access to picard api
- */
 angular
     .module('picard')
+    /**
+     * @ngdoc object
+     * @name picard.config:picardEndpoints
+     *
+     * @description
+     * Object with keys corresponding to endpoint routes (e.g. /custom/document) and values the corresponding
+     * routes' documentation.
+     */
+    .constant('picardEndpoints', {
+        /**
+         * @ngdoc property
+         * @name picard.config.picardEndpoints#routes
+         * @propertyOf picard.config:picardEndpoints
+         * @returns {Object} Object with keys corresponding to endpoint routes (e.g. /custom/document) and values the corresponding
+         * routes' documentation.
+         */
+        routes: {}
+    })
     /**
      * @ngdoc object
      * @name picard.config:picardConfig
@@ -62,15 +73,14 @@ angular
      * @ngdoc service
      * @name picard.service.picard
      * @module picard
+     * @description Functions for HTTP requests.
      */
-
 
     .factory('picard', ['$q', '$http', 'picardConfig', function ($q, $http, picardConfig) {
 
         var baseUrl = picardConfig.base_url;
-
         /**
-         * @ngdoc function
+         *  @private
          * @name picard.service.picard#makeHttpRequest
          * @methodOf picard.service.picard
          *
@@ -83,8 +93,8 @@ angular
          * @param {Object} [options] HTTP config options.  See usage section here for options https://docs.angularjs.org/api/ng/service/$http
          */
 
-        function makeHttpRequest (method, endpoint, params, options) {
-            if(typeof params != 'object'){
+        function makeHttpRequest(method, endpoint, params, options) {
+            if (typeof params != 'object') {
                 params = {}
             }
             // Build the $http config object
@@ -99,25 +109,24 @@ angular
                 responseType: 'json'
             }, opts.config);
             // fitbit endpoint requires withCredentials parameter be false
-            if(endpoint == '/auth/oauthAuthorize/fitbit'){
+            if (endpoint == '/auth/oauthAuthorize/fitbit') {
                 http.withCredentials = false;
             }
             // build the params or data fields depending on the http method
-            if(method == 'GET' || method == 'DELETE'){
+            if (method == 'GET' || method == 'DELETE') {
                 http.params = {p: params};
             } else {
                 http.data = params;
             }
             // make the API call and call either the success or error function
             return $http(http).then(
-                res.bind(this, opts),
+                success.bind(this, opts),
                 err.bind(this, opts)
             );
         }
 
-
         /**
-         * @ngdoc function
+         *  @private
          * @name picard.service.picard#success
          * @methodOf picard.service.picard
          *
@@ -125,7 +134,7 @@ angular
          * Internal function called if API call is successful, meaning its status code is in the range [200,299].
          * If opts.fullResponse is true then the entire http response is returned.  Otherwise
          * it returns only the data and status fields.  Note opts.fullResponse is false by default. To
-         * modify the value in a http GET call create an object with {fullRespone:true} and then pass it into
+         * modify the value in a http GET call create an object with {fullResponse:true} and then pass it into
          * the options parameter to the Picard.get call.
          *
          *
@@ -133,7 +142,7 @@ angular
          * @param {object} res http response
          */
 
-        function res (opts, res) {
+        function success(opts, res) {
             var ret = res.data;
             ret.status = res.status;
             if (opts.fullResponse) {
@@ -143,7 +152,7 @@ angular
         }
 
         /**
-         * @ngdoc function
+         * @private
          * @name picard.service.picard#error
          * @methodOf picard.service.picard
          *
@@ -158,7 +167,7 @@ angular
          * @param {object} res http response
          */
 
-        function err (opts, res) {
+        function err(opts, res) {
             var ret = res.data;
             ret.status = res.status;
             if (opts.fullResponse) {
@@ -226,115 +235,31 @@ angular
              * @param {object} [params] api call request parameters
              * @param {options} [options] http options to override
              */
-            delete: function (endpoint, params, options){
+            delete: function (endpoint, params, options) {
                 return makeHttpRequest('DELETE', endpoint, params, options);
-            },
-            /**
-             * @ngdoc function
-             * @name picard.service.picard#login
-             * @methodOf picard.service.picard
-             *
-             * @description
-             * Logs a user in and stashes the session key
-             *
-             * @param {string} name username
-             * @param {string} password user password
-             * @param {boolean} [remember] set to true if you want user session to stay valid for time length specified by
-             * REMEMBER_COOKIE_DURATION config variable.
-             */
-            login: function(username, password, remember){
-                var http_request_params = {
-                    name: username,
-                    password: password,
-                    remember: typeof remember === 'boolean' ? remember: false
-                };
-                return makeHttpRequest('POST', 'auth/login', http_request_params);
-            },
-            /**
-             * @ngdoc function
-             * @name picard.service.picard#logout
-             * @methodOf picard.service.picard
-             *
-             * @description
-             * Logs a user out.  Does not require any parameters.
-             *
-             */
-            logout: function(){
-                return makeHttpRequest('POST', 'auth/logout');
-            },
-            /**
-             * @ngdoc function
-             * @name picard.service.picard#register
-             * @methodOf picard.service.picard
-             *
-             * @description
-             * Registers a new user account
-             * <pre>
-             *     // succeeds in creating new user
-             *     picard.register('jonnie17', 'superSecret12345', 'john@email.com');
-             *     // throws 409 as user with username johnnie 17 already exists
-             *     picard.register('jonnie17', 'superSecret12345', 'john@email.com');
-             *     // throws 409 as user with email john@email.com already exists
-             *     picard.register('susan19', 'superSecret12345', 'john@email.com');
-             * </pre>
-             *
-             * @param {string} name username
-             * @param {string} password user password
-             * @param {string} email user email address
-             */
-            register: function(name, password, email){
-                var http_request_params = {
-                    'name': name,
-                    'password': password,
-                    'email': email
-                };
-                return makeHttpRequest('POST', 'auth/logout', http_request_params);
-            },
-            /**
-             * @ngdoc function
-             * @name picard.service.picard#forgotPassword
-             * @methodOf picard.service.picard
-             *
-             * @description
-             * Sends email containing password reset token.
-             * <pre>
-             *     // sends john@email.com an email with password reset token
-             *     picard.forgotPassord('john@email.com');
-             * </pre>
-             *
-             * @param {string} email user email address
-             */
-            forgotPassword: function(email){
-                var http_request_params = {
-                    'email': email
-                };
-                return makeHttpRequest('POST', 'auth/passwordReset', http_request_params);
-            },
-            /**
-             * @ngdoc function
-             * @name picard.service.picard#resetPasswordByToken
-             * @methodOf picard.service.picard
-             *
-             * @description
-             * Resets user password by their token.
-             * <pre>
-             *     // sends john@email.com an email with password reset token
-             *     picard.resetPasswordByToken('09352908510981320985091810329581', 'newpassword');
-             * </pre>
-             *
-             * @param {string} token password reset token sent to user email
-             * @param {string} password new user password
-             */
-            resetPasswordByToken: function(token, password){
-                var http_request_params = {
-                    'token': token,
-                    'password': password
-                };
-                return makeHttpRequest('POST', 'auth/passwordUpdatebyToken', http_request_params);
             }
-        };
+        }
+    }])
 
-    }
-    ]);
-
+    .run(function(picard, picardEndpoints){
+        picard.get("/admin/sitemap").then(function(res){
+            var endpoints = {};
+            var sitemap = res.routes;
+            var modules = Object.keys(sitemap);
+            modules.forEach(function(module){
+                var functions = Object.keys(sitemap[module]);
+                functions.forEach(function(f){
+                    var methods = Object.keys(sitemap[module][f]);
+                    methods.forEach(function(method){
+                        var endpoint_doc = sitemap[module][f][method];
+                        if(!endpoints.hasOwnProperty(endpoint_doc['route'])){
+                            endpoints[endpoint_doc['route']] = {};
+                        }
+                        endpoints[endpoint_doc['route']][method] = endpoint_doc;
+                    });
+                });
+            });
+            picardEndpoints.routes = endpoints;
+        });
+    });
 

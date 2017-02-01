@@ -1,0 +1,82 @@
+<h1><code ng:non-bindable="">picardTerms</code>
+<div><span class="hint">service in module <code ng:non-bindable="">picard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_termsformget">termsformGet(object)</h3>
+<div class="termsformget"><div class="picard-service-picardterms-termsformget-page"><p>Get newest tosform<br/></p>
+<h4 id="endpoint-br-" id="methods_termsformget_endpoint">Endpoint: <br/></h4>
+<p>/terms/tosform<br/></p>
+<h4 id="permissions" id="methods_termsformget_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_termsformget_usage">Usage</h4>
+<pre><code class="lang-js"> picardTerms.termsformGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_termsformget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>s3creds</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardterms-termsformget-page"><pre class="">{{{"default": false, "comment": "Boolean indicating if response should include federatedtokens for accessing terms of service object in s3."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_termsformget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardterms-termsformget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_tosformcreate">tosformCreate(object)</h3>
+<div class="tosformcreate"><div class="picard-service-picardterms-tosformcreate-page"><p>Add tosform<br/></p>
+<h4 id="endpoint-br-" id="methods_tosformcreate_endpoint">Endpoint: <br/></h4>
+<p>/terms/tosform<br/></p>
+<h4 id="permissions" id="methods_tosformcreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_tosformcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardTerms.tosformCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_tosformcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformcreate-page"><pre class="">{{{"comment": "Tosform url to add"}|json}}</pre>
+</div></td></tr><tr><td>s3creds</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardterms-tosformcreate-page"><pre class="">{{{"default": false, "comment": "Boolean indicating if response should include federatedtokens for accessing terms of service object in s3."}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformcreate-page"><pre class="">{{{"comment": "Description of form to add"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_tosformcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardterms-tosformcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_tosformdelete">tosformDelete(object)</h3>
+<div class="tosformdelete"><div class="picard-service-picardterms-tosformdelete-page"><p>Delete a Tosform by id<br/></p>
+<h4 id="endpoint-br-" id="methods_tosformdelete_endpoint">Endpoint: <br/></h4>
+<p>/terms/tosform<br/></p>
+<h4 id="permissions" id="methods_tosformdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_tosformdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardTerms.tosformDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_tosformdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformdelete-page"><pre class="">{{{"comment": "Tosform id to delete"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_tosformdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardterms-tosformdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_tosformlist">tosformList(object)</h3>
+<div class="tosformlist"><div class="picard-service-picardterms-tosformlist-page"><p>Auth Endpoint, gets list of tosforms, filterable<br/></p>
+<h4 id="endpoint-br-" id="methods_tosformlist_endpoint">Endpoint: <br/></h4>
+<p>/terms/tosformList<br/></p>
+<h4 id="permissions" id="methods_tosformlist_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_tosformlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardTerms.tosformList(http_request_params)
+</code></pre>
+</div><h5 id="methods_tosformlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformlist-page"><pre class="">{{{"default": null, "comment": "Filter tosform description"}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardterms-tosformlist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)"}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardterms-tosformlist-page"><pre class="">{{{"default": 20, "comment": "Limit number of responses"}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformlist-page"><pre class="">{{{"default": "created", "comment": "Column to sort results on"}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-tosformlist-page"><pre class="">{{{"default": "desc", "comment": "Sort order, asc or desc"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_tosformlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardterms-tosformlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_usertoscreate">usertosCreate(object)</h3>
+<div class="usertoscreate"><div class="picard-service-picardterms-usertoscreate-page"><p>Add usertos agreement to a user<br/></p>
+<h4 id="endpoint-br-" id="methods_usertoscreate_endpoint">Endpoint: <br/></h4>
+<p>/terms/usertos<br/></p>
+<h4 id="permissions" id="methods_usertoscreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_usertoscreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardTerms.usertosCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_usertoscreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardterms-usertoscreate-page"><pre class="">{{{"comment": "Tosform uuid to agree to"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_usertoscreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardterms-usertoscreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,419 @@
+<h1><code ng:non-bindable="">picardCustom</code>
+<div><span class="hint">service in module <code ng:non-bindable="">picard</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_bulkloadlist">bulkloadList(object)</h3>
+<div class="bulkloadlist"><div class="picard-service-picardcustom-bulkloadlist-page"><p>Custom Endpoint, gets list of bulkloads.<br/></p>
+<h4 id="endpoint-br-" id="methods_bulkloadlist_endpoint">Endpoint: <br/></h4>
+<p>/custom/bulkloadList<br/></p>
+<h4 id="permissions" id="methods_bulkloadlist_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_bulkloadlist_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.bulkloadList(http_request_params)
+</code></pre>
+</div><h5 id="methods_bulkloadlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>all</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": false, "comment": "Boolean to specify if user wants all bulkmod processes returned.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>suffix</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": null, "comment": "Used to limit results to only bulk load processes where the file name suffix is one of json,csv, xls, or xlsx.  Value of the parameter should be the suffix of interest.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>filename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": null, "comment": "Used to limit results to only bulk load processes where the file name begins with a particular string.  The value of this parameter should be the corresponding prefix.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>target_doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": null, "comment": "Used to limit results to only those that are loading data into a specific target_doctype.  The value of this parameter should be a valid uuid of thetarget doctype of interest"}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": 100, "comment": "Limit number of responses", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": "modified", "comment": "Column to sort results on.  One of created, owner, modified, operation, target_doctype, filename", "setdefault": true, "in": ["created", "owner", "modified", "operation", "target_doctype", "filename"]}|json}}</pre>
+</div></td></tr><tr><td>owner</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": null, "comment": "Used to limit results to only bulk load processes created by a specific user.  The value ofthis parameter should be a valid users uuid.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>operation</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": null, "comment": "Used to limit results to only bulk load processes where the operation is currently equalto a specific value.  The value of this parameter should be one of start, pause, completed, equal, resume, merge.", "setdefault": true, "in": ["start", "pause", "completed", "resume", "merge"]}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><pre class="">{{{"default": "desc", "comment": "Sort order, asc or desc", "setdefault": true, "in": ["asc", "desc"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_bulkloadlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-bulkloadlist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_deleteuploadprocessrecord">deleteUploadprocessrecord(object)</h3>
+<div class="deleteuploadprocessrecord"><div class="picard-service-picardcustom-deleteuploadprocessrecord-page"><p>Deletes the bulk upload process.<br/></p>
+<h4 id="endpoint-br-" id="methods_deleteuploadprocessrecord_endpoint">Endpoint: <br/></h4>
+<p>/custom/load<br/></p>
+<h4 id="permissions" id="methods_deleteuploadprocessrecord_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_deleteuploadprocessrecord_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.deleteUploadprocessrecord(http_request_params)
+</code></pre>
+</div><h5 id="methods_deleteuploadprocessrecord_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-deleteuploadprocessrecord-page"><pre class="">{{{"default": null, "comment": "UUID of upload process.", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_deleteuploadprocessrecord_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-deleteuploadprocessrecord-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypecheck">doctypeCheck(object)</h3>
+<div class="doctypecheck"><div class="picard-service-picardcustom-doctypecheck-page"><p>Checks doctype entries for consistency between master and search datasources<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypecheck_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctypeCheck<br/></p>
+<h4 id="permissions" id="methods_doctypecheck_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypecheck_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeCheck(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypecheck_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecheck-page"><pre class="">{{{"comment": "Doctype to reindex", "oneof": ["id", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecheck-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>fix</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypecheck-page"><pre class="">{{{"default": false, "comment": "Fix any issues found with consistency"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypecheck_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypecheck-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypeclone">doctypeClone(object)</h3>
+<div class="doctypeclone"><div class="picard-service-picardcustom-doctypeclone-page"><p>Clones existing doctype into new doctype<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypeclone_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctypeClone<br/></p>
+<h4 id="permissions" id="methods_doctypeclone_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypeclone_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeClone(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypeclone_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>newdoctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"comment": "Name of new doctype", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"comment": "Doctype to reindex", "oneof": ["id", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>newdescription</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"comment": "Description of new doctype", "required": true}|json}}</pre>
+</div></td></tr><tr><td>mappings</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"default": null, "comment": "Mappings for new doctype (optional)"}|json}}</pre>
+</div></td></tr><tr><td>shards</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><pre class="">{{{"default": null, "comment": "Shard count for new index (optional)"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypeclone_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypeclone-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypecreate">doctypeCreate(object)</h3>
+<div class="doctypecreate"><div class="picard-service-picardcustom-doctypecreate-page"><p>Creates a new doctype<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypecreate_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctype<br/></p>
+<h4 id="permissions" id="methods_doctypecreate_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypecreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypecreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>readperm</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"comment": "Read Permission", "required": true, "in": ["public", "owner", "users", "grouped"], "maxlength": 8}|json}}</pre>
+</div></td></tr><tr><td>writeperm</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"comment": "Write Permission", "required": true, "in": ["public", "owner", "users", "grouped"], "maxlength": 8}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"comment": "Collection name, must be unique", "minlength": 1, "required": true, "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>files</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": false, "comment": "Boolean value indicating if doctype documents can store files."}|json}}</pre>
+</div></td></tr><tr><td>id_seed</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": null, "minlength": 1, "comment": "String value used for document uuid5 seeding.", "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": null, "comment": "Description of doctype", "maxlength": 255}|json}}</pre>
+</div></td></tr><tr><td>settings</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": null, "comment": "Indice settings of the form {\"settings\": {}}.  Mostly used for custom analyzers."}|json}}</pre>
+</div></td></tr><tr><td>dynamic</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": true, "comment": "Boolean value indicating if doctype supports dynamic mapping."}|json}}</pre>
+</div></td></tr><tr><td>shards</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": null, "comment": "Number of shards to use for doctype in search index"}|json}}</pre>
+</div></td></tr><tr><td>bulk_add</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": false, "comment": "Boolean value indicating if doctype permits bulk uploads."}|json}}</pre>
+</div></td></tr><tr><td>mappings</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><pre class="">{{{"default": null, "comment": "The mapping definition of the form: {\"properties\": {}}."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypecreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypecreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypedelete">doctypeDelete(object)</h3>
+<div class="doctypedelete"><div class="picard-service-picardcustom-doctypedelete-page"><p>Deletes doctype<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypedelete_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctype<br/></p>
+<h4 id="permissions" id="methods_doctypedelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypedelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypedelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypedelete-page"><pre class="">{{{"default": null, "comment": "Doctype uuid to delete", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypedelete-page"><pre class="">{{{"default": null, "comment": "Doctype name to delete"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypedelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypedelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypeget">doctypeGet(object)</h3>
+<div class="doctypeget"><div class="picard-service-picardcustom-doctypeget-page"><p>Get a collection doctype by name<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypeget_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctype<br/></p>
+<h4 id="permissions" id="methods_doctypeget_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypeget_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypeget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeget-page"><pre class="">{{{"default": null, "comment": "Doctype uuid", "oneof": ["id", "name"], "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeget-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>full</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypeget-page"><pre class="">{{{"default": false, "comment": "Return full doctype listing with search mapping"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypeget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypeget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypelist">doctypeList(object)</h3>
+<div class="doctypelist"><div class="picard-service-picardcustom-doctypelist-page"><p>Custom Endpoint, gets list of approved doctypes<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypelist_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctypeList<br/></p>
+<h4 id="permissions" id="methods_doctypelist_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypelist_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeList(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypelist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>all</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": false, "comment": "Boolean to specify if user wants all doctypes returned", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": null, "comment": "Filter doctype list by name or description", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": 10, "comment": "Limit number of responses"}|json}}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or des&lt;stc", "setdefault": true, "in": ["asc", "desc"]}|json}}</pre>
+</div></td></tr><tr><td>exact</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": false, "comment": "Boolean to specify if user wants match", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><pre class="">{{{"default": "name", "comment": "Column to sort results on", "setdefault": true, "in": ["name", "description"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypelist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypelist-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypereindex">doctypeReindex(object)</h3>
+<div class="doctypereindex"><div class="picard-service-picardcustom-doctypereindex-page"><p>Reindexes doctype, optionally with new mapping<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypereindex_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctypeReindex<br/></p>
+<h4 id="permissions" id="methods_doctypereindex_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypereindex_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeReindex(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypereindex_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypereindex-page"><pre class="">{{{"comment": "Doctype to reindex", "oneof": ["id", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypereindex-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>mappings</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-doctypereindex-page"><pre class="">{{{"default": null, "comment": "New mapping for reindexed doctype"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypereindex_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypereindex-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_doctypeupdate">doctypeUpdate(object)</h3>
+<div class="doctypeupdate"><div class="picard-service-picardcustom-doctypeupdate-page"><p>Updates an existing doctype.<br/></p>
+<h4 id="endpoint-br-" id="methods_doctypeupdate_endpoint">Endpoint: <br/></h4>
+<p>/custom/doctype<br/></p>
+<h4 id="permissions" id="methods_doctypeupdate_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_doctypeupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.doctypeUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_doctypeupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Doctype UUID", "oneof": ["id", "name"]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Doctype name to update"}|json}}</pre>
+</div></td></tr><tr><td>files</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Boolean value indicating if doctype documents can store files."}|json}}</pre>
+</div></td></tr><tr><td>dynamic</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": true, "comment": "Boolean value indicating if doctype supports dynamic mapping."}|json}}</pre>
+</div></td></tr><tr><td>readperm</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Read Permission", "in": ["public", "owner", "users", "grouped"], "maxlength": 16}|json}}</pre>
+</div></td></tr><tr><td>bulk_add</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Boolean value indicating if doctype permits bulk uploads."}|json}}</pre>
+</div></td></tr><tr><td>writeperm</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Description of doctype", "in": ["public", "owner", "users", "grouped"], "maxlength": 16}|json}}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><pre class="">{{{"default": null, "comment": "Description of doctype", "maxlength": 255}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_doctypeupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-doctypeupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentbulkcreate">documentBulkcreate(object)</h3>
+<div class="documentbulkcreate"><div class="picard-service-picardcustom-documentbulkcreate-page"><p>Custom Endpoint, creates multiple documents at once.<br/></p>
+<h4 id="endpoint-br-" id="methods_documentbulkcreate_endpoint">Endpoint: <br/></h4>
+<p>/custom/documentBulkCreate<br/></p>
+<h4 id="permissions" id="methods_documentbulkcreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_documentbulkcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentBulkcreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentbulkcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>documents</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentbulkcreate-page"><pre class="">{{{"comment": "List of documents to create..", "required": true}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentbulkcreate-page"><pre class="">{{{"comment": "Doctype UUID", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentbulkcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentbulkcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentcreate">documentCreate(object)</h3>
+<div class="documentcreate"><div class="picard-service-picardcustom-documentcreate-page"><p>Creates a custom document<br/></p>
+<h4 id="endpoint-br-" id="methods_documentcreate_endpoint">Endpoint: <br/></h4>
+<p>/custom/document<br/></p>
+<h4 id="permissions" id="methods_documentcreate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_documentcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>document</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-documentcreate-page"><pre class="">{{{"comment": "Document Body", "minlength": 1, "required": true}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentcreate-page"><pre class="">{{{"comment": "Doctype UUID", "oneof": ["doctype", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentcreate-page"><pre class="">{{{"default": false, "comment": "Doctype name", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>_id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentcreate-page"><pre class="">{{{"default": null, "minlength": 1, "setdefault": true, "comment": "Optional custom Document ID string, for reproducible uuid 5 id"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentdelete">documentDelete(object)</h3>
+<div class="documentdelete"><div class="picard-service-picardcustom-documentdelete-page"><p>Deletes an existing document, admin only, users delete by updating with deleted bit<br/></p>
+<h4 id="endpoint-br-" id="methods_documentdelete_endpoint">Endpoint: <br/></h4>
+<p>/custom/document<br/></p>
+<h4 id="permissions" id="methods_documentdelete_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_documentdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentdelete-page"><pre class="">{{{"default": null, "comment": "Document UUID", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]]}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentdelete-page"><pre class="">{{{"default": null, "comment": "Name of document to find"}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentdelete-page"><pre class="">{{{"default": null, "comment": "UUID of doctype for document"}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentdelete-page"><pre class="">{{{"default": null, "comment": "Name of doctype for document"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentget">documentGet(object)</h3>
+<div class="documentget"><div class="picard-service-picardcustom-documentget-page"><p>Get a custom document by id<br/></p>
+<h4 id="endpoint-br-" id="methods_documentget_endpoint">Endpoint: <br/></h4>
+<p>/custom/document<br/></p>
+<h4 id="permissions" id="methods_documentget_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_documentget_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentget-page"><pre class="">{{{"default": null, "comment": "Document UUID", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]], "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentget-page"><pre class="">{{{"default": null, "comment": "Custom Document ID string used at document creation.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentget-page"><pre class="">{{{"default": null, "comment": "UUID of doctype for document", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentget-page"><pre class="">{{{"default": null, "comment": "Name of doctype for document", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>files</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-documentget-page"><pre class="">{{{"default": false, "comment": "Boolean that controls whether a list of the documents files are included in the response.", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentsearch">documentSearch(object)</h3>
+<div class="documentsearch"><div class="picard-service-picardcustom-documentsearch-page"><p>Custom Endpoint, filters documents based on user input<br/></p>
+<h4 id="endpoint-br-" id="methods_documentsearch_endpoint">Endpoint: <br/></h4>
+<p>/custom/documentSearch<br/></p>
+<h4 id="permissions" id="methods_documentsearch_permissions">Permissions</h4>
+<p>Authentication not required<br/></p>
+<h4 id="usage" id="methods_documentsearch_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentSearch(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentsearch_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"comment": "Doctype UUID", "oneof": ["doctype", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>must</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "required": false, "commment": "Query JSON object specifying query clauses, all of which must be true.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>sort</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "comment": "A comma-separated list of &lt;field&gt;:&lt;direction&gt; pairs.  Direction is one of asc or desc.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>must_not</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "commment": "Query JSON object specifying query clauses, all of which must be false.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>from</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": 0, "comment": "Starting offset.  Used for pagination.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>_source_include</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "comment": "Fields to include in the response.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>should</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "commment": "Query JSON object specifying should query clauses, one of which must of true.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>search_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": "exact", "comment": "String defining the search_type.  Set equal to score to use scoring vs exact matching", "setdefault": true, "in": ["exact", "score"]}|json}}</pre>
+</div></td></tr><tr><td>download</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": false, "comment": "If True then results are written to a file in S3 and a url to the file is returned.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>track_scores</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": false, "comment": "Flag to determine if scores should be calculated.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>aggs</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": {}, "commment": "Aggregation JSON object specifying aggregation to make on data.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>post_filter</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": {}, "comment": "Post filter JSON object used to define which documents should be returned.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>highlight</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": {}, "comment": "Highlighting dictionary.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>flatten</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": false, "comment": "Flag controlling if Object fields are flattend before being returned.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": 10, "comment": "Maximum Number of hits to return.", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>download_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": "tsv", "comment": "Defines file type for download.  Current valid values are csv or json.", "setdefault": true, "in": ["tsv", "json"]}|json}}</pre>
+</div></td></tr><tr><td>_source_exclude</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><pre class="">{{{"default": [], "comment": "Fields to exclude from the response.", "setdefault": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentsearch_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentsearch-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_documentupdate">documentUpdate(object)</h3>
+<div class="documentupdate"><div class="picard-service-picardcustom-documentupdate-page"><p>Updates an existing document<br/></p>
+<h4 id="endpoint-br-" id="methods_documentupdate_endpoint">Endpoint: <br/></h4>
+<p>/custom/document<br/></p>
+<h4 id="permissions" id="methods_documentupdate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_documentupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.documentUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_documentupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>document</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><pre class="">{{{"comment": "Updated document body", "required": true}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><pre class="">{{{"default": null, "comment": "Document UUID", "oneof": ["id", ["name", "doctype"], ["name", "doctypename"]], "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><pre class="">{{{"default": null, "comment": "Name of document to find"}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><pre class="">{{{"default": null, "comment": "UUID of doctype for document", "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><pre class="">{{{"default": null, "comment": "Name of doctype for document"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_documentupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-documentupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_fieldupdate">fieldUpdate(object)</h3>
+<div class="fieldupdate"><div class="picard-service-picardcustom-fieldupdate-page"><p>Custom Endpoint, modifies fields within a document.<br/></p>
+<h4 id="endpoint-br-" id="methods_fieldupdate_endpoint">Endpoint: <br/></h4>
+<p>/custom/fieldUpdate<br/></p>
+<h4 id="permissions" id="methods_fieldupdate_permissions">Permissions</h4>
+<p>*valid user<br/></p>
+<h4 id="usage" id="methods_fieldupdate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.fieldUpdate(http_request_params)
+</code></pre>
+</div><h5 id="methods_fieldupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>field</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-fieldupdate-page"><pre class="">{{{"required": true, "commment": "Field to modify."}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-fieldupdate-page"><pre class="">{{{"comment": "Document UUID.", "required": true}|json}}</pre>
+</div></td></tr><tr><td>op</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-fieldupdate-page"><pre class="">{{{"required": true, "commment": "One of push, pop, or delete.", "in": ["push", "pop", "delete"]}|json}}</pre>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-fieldupdate-page"><pre class="">{{{"default": [], "comment": "Values to push or pop."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_fieldupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-fieldupdate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getuploadprocessrecord">getUploadprocessrecord(object)</h3>
+<div class="getuploadprocessrecord"><div class="picard-service-picardcustom-getuploadprocessrecord-page"><p>Gets the process record for the specified file.<br/></p>
+<h4 id="endpoint-br-" id="methods_getuploadprocessrecord_endpoint">Endpoint: <br/></h4>
+<p>/custom/load<br/></p>
+<h4 id="permissions" id="methods_getuploadprocessrecord_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_getuploadprocessrecord_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.getUploadprocessrecord(http_request_params)
+</code></pre>
+</div><h5 id="methods_getuploadprocessrecord_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-getuploadprocessrecord-page"><pre class="">{{{"default": null, "comment": "UUID of upload process.", "required": true}|json}}</pre>
+</div></td></tr><tr><td>download</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardcustom-getuploadprocessrecord-page"><pre class="">{{{"default": false, "comment": "If True then response contains S3 url that enables user to download and inspect errors."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_getuploadprocessrecord_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-getuploadprocessrecord-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_groupingcreate">groupingCreate(object)</h3>
+<div class="groupingcreate"><div class="picard-service-picardcustom-groupingcreate-page"><p>Creates a custom permission grouping<br/></p>
+<h4 id="endpoint-br-" id="methods_groupingcreate_endpoint">Endpoint: <br/></h4>
+<p>/custom/grouping<br/></p>
+<h4 id="permissions" id="methods_groupingcreate_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_groupingcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.groupingCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_groupingcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>perm_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingcreate-page"><pre class="">{{{"comment": "Grouping Type (role or usergroup)", "required": true, "in": ["read", "write"]}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingcreate-page"><pre class="">{{{"comment": "Doctype UUID", "required": true}|json}}</pre>
+</div></td></tr><tr><td>grouping_uuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingcreate-page"><pre class="">{{{"comment": "UUID of role or usergroup referenced", "required": true}|json}}</pre>
+</div></td></tr><tr><td>grouping_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingcreate-page"><pre class="">{{{"comment": "Grouping Type (role, roleuser or usergroup)", "required": true, "in": ["role", "usergroup", "roleuser"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_groupingcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-groupingcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_groupingdelete">groupingDelete(object)</h3>
+<div class="groupingdelete"><div class="picard-service-picardcustom-groupingdelete-page"><p>Deletes a custom permission grouping<br/></p>
+<h4 id="endpoint-br-" id="methods_groupingdelete_endpoint">Endpoint: <br/></h4>
+<p>/custom/grouping<br/></p>
+<h4 id="permissions" id="methods_groupingdelete_permissions">Permissions</h4>
+<p>*Administrators System Role<br/></p>
+<h4 id="usage" id="methods_groupingdelete_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.groupingDelete(http_request_params)
+</code></pre>
+</div><h5 id="methods_groupingdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>perm_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingdelete-page"><pre class="">{{{"comment": "Perm Type (read or write)", "required": true, "in": ["read", "write"]}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingdelete-page"><pre class="">{{{"comment": "Doctype UUID", "required": true}|json}}</pre>
+</div></td></tr><tr><td>grouping_uuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingdelete-page"><pre class="">{{{"comment": "UUID of role or usergroup referenced", "required": true}|json}}</pre>
+</div></td></tr><tr><td>grouping_type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-groupingdelete-page"><pre class="">{{{"comment": "Grouping Type (role, roleuser or usergroup)", "required": true, "in": ["role", "usergroup", "roleuser"]}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_groupingdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-groupingdelete-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_mappingcreate">mappingCreate(object)</h3>
+<div class="mappingcreate"><div class="picard-service-picardcustom-mappingcreate-page"><p>Create or update a mapping<br/></p>
+<h4 id="endpoint-br-" id="methods_mappingcreate_endpoint">Endpoint: <br/></h4>
+<p>/custom/mapping<br/></p>
+<h4 id="permissions" id="methods_mappingcreate_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_mappingcreate_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.mappingCreate(http_request_params)
+</code></pre>
+</div><h5 id="methods_mappingcreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-mappingcreate-page"><pre class="">{{{"comment": "Doctype UUID", "oneof": ["doctype", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-mappingcreate-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr><tr><td>mapping</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardcustom-mappingcreate-page"><pre class="">{{{"comment": "The mapping definition of the form: {\"properties\": {}}", "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_mappingcreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-mappingcreate-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_mappingget">mappingGet(object)</h3>
+<div class="mappingget"><div class="picard-service-picardcustom-mappingget-page"><p>Gets a custom mapping<br/></p>
+<h4 id="endpoint-br-" id="methods_mappingget_endpoint">Endpoint: <br/></h4>
+<p>/custom/mapping<br/></p>
+<h4 id="permissions" id="methods_mappingget_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_mappingget_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.mappingGet(http_request_params)
+</code></pre>
+</div><h5 id="methods_mappingget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fields</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardcustom-mappingget-page"><pre class="">{{{"default": null, "comment": "A comma-separated list of fields.", "required": false, "setdefault": true}|json}}</pre>
+</div></td></tr><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-mappingget-page"><pre class="">{{{"comment": "Doctype UUID.", "oneof": ["doctype", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-mappingget-page"><pre class="">{{{"default": null, "comment": "Doctype name"}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_mappingget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-mappingget-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_startloadingprocess">startLoadingprocess(object)</h3>
+<div class="startloadingprocess"><div class="picard-service-picardcustom-startloadingprocess-page"><p>Starts a process to load data from a file.<br/></p>
+<h4 id="endpoint-br-" id="methods_startloadingprocess_endpoint">Endpoint: <br/></h4>
+<p>/custom/load<br/></p>
+<h4 id="permissions" id="methods_startloadingprocess_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_startloadingprocess_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.startLoadingprocess(http_request_params)
+</code></pre>
+</div><h5 id="methods_startloadingprocess_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>doctype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-startloadingprocess-page"><pre class="">{{{"default": null, "comment": "UUID of target doctype in which user wants to load data", "oneof": ["doctype", "doctypename"]}|json}}</pre>
+</div></td></tr><tr><td>doctypename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-startloadingprocess-page"><pre class="">{{{"default": null, "comment": "Name of target doctype in which user wants to load data"}|json}}</pre>
+</div></td></tr><tr><td>filesize</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-startloadingprocess-page"><pre class="">{{{"comment": "File size in bytes.  Used to ensure upload has completed before data is loaded.", "required": true}|json}}</pre>
+</div></td></tr><tr><td>filename</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-startloadingprocess-page"><pre class="">{{{"comment": "Filename to attach to document", "endswith": ["json", "xls", "xlsx", "tsv"], "required": true}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_startloadingprocess_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-startloadingprocess-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updateuploadprocessrecord">updateUploadprocessrecord(object)</h3>
+<div class="updateuploadprocessrecord"><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><p>Updates the bulk upload process.<br/></p>
+<h4 id="endpoint-br-" id="methods_updateuploadprocessrecord_endpoint">Endpoint: <br/></h4>
+<p>/custom/load<br/></p>
+<h4 id="permissions" id="methods_updateuploadprocessrecord_permissions">Permissions</h4>
+<p>*Workforce System Role,Administrators System Role<br/></p>
+<h4 id="usage" id="methods_updateuploadprocessrecord_usage">Usage</h4>
+<pre><code class="lang-js"> picardCustom.updateUploadprocessrecord(http_request_params)
+</code></pre>
+</div><h5 id="methods_updateuploadprocessrecord_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>operation</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><pre class="">{{{"required": true, "in": ["start", "pause", "resume", "merge"]}|json}}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><pre class="">{{{"default": null, "comment": "UUID of upload process.", "required": true}|json}}</pre>
+</div></td></tr><tr><td>numLines</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><pre class="">{{{"default": 500, "comment": "Specifies number of documents to load at once."}|json}}</pre>
+</div></td></tr><tr><td>pause_after</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><pre class="">{{{"default": -1, "comment": "Automatically pause the upload after this many iterations.  Useful for testing big uploads.  To not automatically pause keep at the default value of -1."}|json}}</pre>
+</div></td></tr></tbody></table><h5 id="methods_updateuploadprocessrecord_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardcustom-updateuploadprocessrecord-page"><p>Paired down response of angulars $http method</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
