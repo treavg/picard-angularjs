@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "picard",
       "shortDescription": "The picard module provides access to the picard api.  The module consists of multiple services, each of which",
-      "keywords": "access api arguments call consists corresponding endpoint expose fields function functions javascript module multiple objects overview parameters picard services single"
+      "keywords": "$scope access angular api arguments base_url cache call config consists constant controller corresponding ctrl define endpoint expose false fields fullresponse function functions html https io javascript js json module multiple ng-controller objects overview parameters picard picardconfig picardexample res script services set single stack"
     },
     {
       "section": "api",
@@ -112,7 +112,8 @@ NG_DOCS={
     "scripts": [
       "js/angular.min.js",
       "js/angular-animate.min.js",
-      "js/marked.js"
+      "js/marked.js",
+      "js/dist/picard.js"
     ],
     "styles": [],
     "title": "Picard API Documentation",
@@ -133,6 +134,7 @@ NG_DOCS={
   "scripts": [
     "js/angular.min.js",
     "js/angular-animate.min.js",
-    "js/marked.js"
+    "js/marked.js",
+    "js/dist/picard.js"
   ]
 };

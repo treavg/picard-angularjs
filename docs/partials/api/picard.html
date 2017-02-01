@@ -5,4 +5,39 @@
 <div><div class="picard-page"><p>The picard module provides access to the picard api.  The module consists of multiple services, each of which
 expose functions that call a single endpoint.  Function arguments are Javascript Objects with fields corresponding
 to endpoint parameters.</p>
+</div><h2 id="example">Example</h2>
+<div class="example"><div class="picard-page"><h4 id="example_source">Source</h4>
+<div source-edit="picardExample" source-edit-deps="angular.js script.js" source-edit-html="index.html" source-edit-css="" source-edit-js="script.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html" ng-html-wrap-loaded="picardExample angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html">
+<div ng-controller="Ctrl">
+<h3 id="example_stack-information">Stack Information</h3>
+<pre>{{ stack | json}}</pre>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js"></pre>
+<script type="text/ng-template" id="script.js">
+angular.module('picardExample', ['picard'])
+// set the picard endpoint to your stack
+.constant('picardConfig', {
+               base_url: 'https://www.picard.io/',
+               fullResponse: false,
+               config: {
+                   "cache": false
+               }
+           })
+// define a controller
+.controller("Ctrl", ['$scope', 'picard',  function($scope, picard){
+               // get the stack id using the picard module
+               picard.get("/admin/stackId",{}).then(function(res){
+                   $scope.stack = res;
+               })
+           }]);
+</script>
+</div>
+</div><h4 id="example_stack-information_demo">Demo</h4>
+<div class="well doc-example-live animate-container" ng-embed-app="picardExample" ng-set-html="index.html" ng-eval-javascript="script.js"></div>
 </div></div>
+</div>
