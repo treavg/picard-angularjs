@@ -24,10 +24,11 @@
             })
  // define a controller
  .controller("Ctrl", ['$scope', 'picard',  function($scope, picard){
-                // get the stack id using the picard module
+                // get the stack id using the picard get function
                 picard.get("/admin/stackId",{}).then(function(res){
                     $scope.stack = res;
                 })
+                // get the stack id using the picard
             }]);
  </file>
  <file name="index.html">
