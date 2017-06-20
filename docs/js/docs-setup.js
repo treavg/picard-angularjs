@@ -37,7 +37,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "picard",
       "shortDescription": "Functions for HTTP requests.",
-      "keywords": "api call delete endpoint function functions http options override parameters picard post preforms public request requests service"
+      "keywords": "address allows api backend base call change connection delete desired dynamic endpoint function functions http options override parameters picard picardbaseurl post preforms public request requests service updatebaseurl url valid"
     },
     {
       "section": "api",

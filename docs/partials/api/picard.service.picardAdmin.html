@@ -6,7 +6,7 @@
 <div><h2 id="description">Description</h2>
 <div class="description"></div>
 <div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><h3 id="methods_apitestrun">apitestRun(object)</h3>
+<ul class="methods"><li><h3 id="methods_apitestrun">apitestRun(params, endpoint, method, id)</h3>
 <div class="apitestrun"><div class="picard-service-picardadmin-apitestrun-page"><p>Runs apitest using local session and internal test client<br/></p>
 <h4 id="endpoint-br-" id="methods_apitestrun_endpoint">Endpoint: <br/></h4>
 <p>/admin/apitestRun<br/></p>
@@ -14,14 +14,14 @@
 <h4 id="usage" id="methods_apitestrun_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.apitestRun(http_request_params)
 </code></pre>
-</div><h5 id="methods_apitestrun_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="">{{{"comment": "Params to call endpoint with", "required": true}|json}}</pre>
-</div></td></tr><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="">{{{"default": null, "comment": "Endpoint to test on, in /module/endpoint format"}|json}}</pre>
-</div></td></tr><tr><td>method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="">{{{"default": "get", "comment": "Method to call endpoint with"}|json}}</pre>
-</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="">{{{"default": "&lt;current_user&gt;", "comment": "User uuid to run endpoint as, admin only"}|json}}</pre>
+</div><h5 id="methods_apitestrun_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="prettyprint linenums">{"comment": "Params to call endpoint with", "required": true}</pre>
+</div></td></tr><tr><td>endpoint</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="prettyprint linenums">{"default": null, "comment": "Endpoint to test on, in /module/endpoint format"}</pre>
+</div></td></tr><tr><td>method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="prettyprint linenums">{"default": "get", "comment": "Method to call endpoint with"}</pre>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><pre class="prettyprint linenums">{"default": "&lt;current_user&gt;", "comment": "User uuid to run endpoint as, admin only"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_apitestrun_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-apitestrun-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_cachefunctest">cacheFunctest(object)</h3>
+<li><h3 id="methods_cachefunctest">cacheFunctest()</h3>
 <div class="cachefunctest"><div class="picard-service-picardadmin-cachefunctest-page"><p>Tests rendering, using default generic mail template.<br/></p>
 <h4 id="endpoint-br-" id="methods_cachefunctest_endpoint">Endpoint: <br/></h4>
 <p>/admin/cacheTest<br/></p>
@@ -33,7 +33,7 @@
 </div><h5 id="methods_cachefunctest_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-cachefunctest-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_configflist">configFlist(object)</h3>
+<li><h3 id="methods_configflist">configFlist(qfilter, page, limit, sortby, sortorder)</h3>
 <div class="configflist"><div class="picard-service-picardadmin-configflist-page"><p>Admin Endpoint: Gets list of configs in set, filterable<br/></p>
 <h4 id="endpoint-br-" id="methods_configflist_endpoint">Endpoint: <br/></h4>
 <p>/admin/configList<br/></p>
@@ -42,15 +42,15 @@
 <h4 id="usage" id="methods_configflist_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.configFlist(http_request_params)
 </code></pre>
-</div><h5 id="methods_configflist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="">{{{"default": null, "comment": "Filter user list by start of name", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="">{{{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="">{{{"default": 20, "comment": "Limit number of responses", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="">{{{"default": "key", "comment": "Column to sort results on", "setdefault": true, "in": ["key", "description"]}|json}}</pre>
-</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="">{{{"default": "asc", "comment": "Sort order, asc or desc", "setdefault": true}|json}}</pre>
+</div><h5 id="methods_configflist_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Filter user list by start of name", "setdefault": true}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="prettyprint linenums">{"default": 0, "comment": "Start responses at page x limit (ie, page number)", "setdefault": true}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="prettyprint linenums">{"default": 20, "comment": "Limit number of responses", "setdefault": true}</pre>
+</div></td></tr><tr><td>sortby</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="prettyprint linenums">{"default": "key", "comment": "Column to sort results on", "setdefault": true, "in": ["key", "description"]}</pre>
+</div></td></tr><tr><td>sortorder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configflist-page"><pre class="prettyprint linenums">{"default": "asc", "comment": "Sort order, asc or desc", "setdefault": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_configflist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-configflist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_configpubliclist">configPubliclist(object)</h3>
+<li><h3 id="methods_configpubliclist">configPubliclist()</h3>
 <div class="configpubliclist"><div class="picard-service-picardadmin-configpubliclist-page"><p>Admin Endpoint: Gets list of configs that can be viewed by public.<br/></p>
 <h4 id="endpoint-br-" id="methods_configpubliclist_endpoint">Endpoint: <br/></h4>
 <p>/admin/publicConfigList<br/></p>
@@ -62,7 +62,7 @@
 </div><h5 id="methods_configpubliclist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-configpubliclist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_configretrieve">configRetrieve(object)</h3>
+<li><h3 id="methods_configretrieve">configRetrieve(key)</h3>
 <div class="configretrieve"><div class="picard-service-picardadmin-configretrieve-page"><p>Provides an app config for key specified<br/></p>
 <h4 id="endpoint-br-" id="methods_configretrieve_endpoint">Endpoint: <br/></h4>
 <p>/admin/config<br/></p>
@@ -71,11 +71,11 @@
 <h4 id="usage" id="methods_configretrieve_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.configRetrieve(http_request_params)
 </code></pre>
-</div><h5 id="methods_configretrieve_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configretrieve-page"><pre class="">{{{"comment": "Key of config to retrieve", "required": true}|json}}</pre>
+</div><h5 id="methods_configretrieve_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configretrieve-page"><pre class="prettyprint linenums">{"comment": "Key of config to retrieve", "required": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_configretrieve_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-configretrieve-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_configupdate">configUpdate(object)</h3>
+<li><h3 id="methods_configupdate">configUpdate(value, key, description)</h3>
 <div class="configupdate"><div class="picard-service-picardadmin-configupdate-page"><p>Updates existing app config<br/></p>
 <h4 id="endpoint-br-" id="methods_configupdate_endpoint">Endpoint: <br/></h4>
 <p>/admin/config<br/></p>
@@ -84,13 +84,13 @@
 <h4 id="usage" id="methods_configupdate_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.configUpdate(http_request_params)
 </code></pre>
-</div><h5 id="methods_configupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="">{{{"comment": "Config value", "minlength": 1, "required": true}|json}}</pre>
-</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="">{{{"comment": "Config key", "required": true}|json}}</pre>
-</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="">{{{"default": null, "comment": "Config description, optional note"}|json}}</pre>
+</div><h5 id="methods_configupdate_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="prettyprint linenums">{"comment": "Config value", "minlength": 1, "required": true}</pre>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="prettyprint linenums">{"comment": "Config key", "required": true}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-configupdate-page"><pre class="prettyprint linenums">{"default": null, "comment": "Config description, optional note"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_configupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-configupdate-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_controlpanellist">controlpanelList(object)</h3>
+<li><h3 id="methods_controlpanellist">controlpanelList()</h3>
 <div class="controlpanellist"><div class="picard-service-picardadmin-controlpanellist-page"><p>Generates list of admin control panels and their frontend assets for dynamic assembly<br/></p>
 <h4 id="endpoint-br-" id="methods_controlpanellist_endpoint">Endpoint: <br/></h4>
 <p>/admin/controlPanelList<br/></p>
@@ -102,7 +102,7 @@
 </div><h5 id="methods_controlpanellist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-controlpanellist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_dblogesquery">dblogEsquery(object)</h3>
+<li><h3 id="methods_dblogesquery">dblogEsquery(qfilter, sort, _source_exclude, _source_include, from_, size)</h3>
 <div class="dblogesquery"><div class="picard-service-picardadmin-dblogesquery-page"><p>Queries log entries via Elastic Search query DSL from the database log, filterable<br/></p>
 <h4 id="endpoint-br-" id="methods_dblogesquery_endpoint">Endpoint: <br/></h4>
 <p>/admin/dblogQuery<br/></p>
@@ -111,16 +111,16 @@
 <h4 id="usage" id="methods_dblogesquery_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.dblogEsquery(http_request_params)
 </code></pre>
-</div><h5 id="methods_dblogesquery_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"comment": "Elasticsearch DSL formatted query filter for list", "required": true}|json}}</pre>
-</div></td></tr><tr><td>sort</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"default": ["timestamp:desc"], "comment": "A comma-separated list of &lt;field&gt;:&lt;direction&gt; pairs.  Direction is one of asc or desc.", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>_source_exclude</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"default": null, "comment": "Fields to exclude from the response.", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>_source_include</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"default": null, "comment": "Fields to include in the response.", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>from_</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"default": 0, "comment": "Starting offset.  Used for pagination.", "setdefault": true}|json}}</pre>
-</div></td></tr><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="">{{{"default": 10, "comment": "Maximum Number of hits to return."}|json}}</pre>
+</div><h5 id="methods_dblogesquery_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"comment": "Elasticsearch DSL formatted query filter for list", "required": true}</pre>
+</div></td></tr><tr><td>sort</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"default": ["timestamp:desc"], "comment": "A comma-separated list of &lt;field&gt;:&lt;direction&gt; pairs.  Direction is one of asc or desc.", "setdefault": true}</pre>
+</div></td></tr><tr><td>_source_exclude</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"default": null, "comment": "Fields to exclude from the response.", "setdefault": true}</pre>
+</div></td></tr><tr><td>_source_include</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"default": null, "comment": "Fields to include in the response.", "setdefault": true}</pre>
+</div></td></tr><tr><td>from_</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"default": 0, "comment": "Starting offset.  Used for pagination.", "setdefault": true}</pre>
+</div></td></tr><tr><td>size</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><pre class="prettyprint linenums">{"default": 10, "comment": "Maximum Number of hits to return."}</pre>
 </div></td></tr></tbody></table><h5 id="methods_dblogesquery_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-dblogesquery-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_dblogeventdelete">dblogEventdelete(object)</h3>
+<li><h3 id="methods_dblogeventdelete">dblogEventdelete(id)</h3>
 <div class="dblogeventdelete"><div class="picard-service-picardadmin-dblogeventdelete-page"><h4 id="endpoint-br-" id="methods_dblogeventdelete_endpoint">Endpoint: <br/></h4>
 <p>/admin/dblogEvent<br/></p>
 <h4 id="permissions" id="methods_dblogeventdelete_permissions">Permissions</h4>
@@ -128,11 +128,11 @@
 <h4 id="usage" id="methods_dblogeventdelete_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.dblogEventdelete(http_request_params)
 </code></pre>
-</div><h5 id="methods_dblogeventdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dblogeventdelete-page"><pre class="">{{{"comment": "Dblog event id to delete", "required": true}|json}}</pre>
+</div><h5 id="methods_dblogeventdelete_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dblogeventdelete-page"><pre class="prettyprint linenums">{"comment": "Dblog event id to delete", "required": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_dblogeventdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-dblogeventdelete-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_dblogeventget">dblogEventget(object)</h3>
+<li><h3 id="methods_dblogeventget">dblogEventget(id)</h3>
 <div class="dblogeventget"><div class="picard-service-picardadmin-dblogeventget-page"><p>Provides a single dblog event by id<br/></p>
 <h4 id="endpoint-br-" id="methods_dblogeventget_endpoint">Endpoint: <br/></h4>
 <p>/admin/dblogEvent<br/></p>
@@ -141,11 +141,11 @@
 <h4 id="usage" id="methods_dblogeventget_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.dblogEventget(http_request_params)
 </code></pre>
-</div><h5 id="methods_dblogeventget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dblogeventget-page"><pre class="">{{{"comment": "Dblog event id", "required": true}|json}}</pre>
+</div><h5 id="methods_dblogeventget_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dblogeventget-page"><pre class="prettyprint linenums">{"comment": "Dblog event id", "required": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_dblogeventget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-dblogeventget-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_dbloglist">dblogList(object)</h3>
+<li><h3 id="methods_dbloglist">dblogList(qfilter, limit, page, system)</h3>
 <div class="dbloglist"><div class="picard-service-picardadmin-dbloglist-page"><p>Queries log entries from the dblog, filterable<br/></p>
 <h4 id="endpoint-br-" id="methods_dbloglist_endpoint">Endpoint: <br/></h4>
 <p>/admin/dblogList<br/></p>
@@ -154,14 +154,14 @@
 <h4 id="usage" id="methods_dbloglist_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.dblogList(http_request_params)
 </code></pre>
-</div><h5 id="methods_dbloglist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="">{{{"default": null, "comment": "Query filter for list, searches against message"}|json}}</pre>
-</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="">{{{"default": 20, "comment": "Limit list to x results starting at page"}|json}}</pre>
-</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="">{{{"default": 0, "comment": "Page to start on (limit * page is first page returned)"}|json}}</pre>
-</div></td></tr><tr><td>system</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="">{{{"default": false, "comment": "Show system log entries, including dblogList endpoint and static files"}|json}}</pre>
+</div><h5 id="methods_dbloglist_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Query filter for list, searches against message"}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="prettyprint linenums">{"default": 20, "comment": "Limit list to x results starting at page"}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="prettyprint linenums">{"default": 0, "comment": "Page to start on (limit * page is first page returned)"}</pre>
+</div></td></tr><tr><td>system</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><pre class="prettyprint linenums">{"default": false, "comment": "Show system log entries, including dblogList endpoint and static files"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_dbloglist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-dbloglist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_sitemap">siteMap(object)</h3>
+<li><h3 id="methods_sitemap">siteMap()</h3>
 <div class="sitemap"><div class="picard-service-picardadmin-sitemap-page"><p>Generates sitemap of routes available, including parameters checks and docs<br/></p>
 <h4 id="endpoint-br-" id="methods_sitemap_endpoint">Endpoint: <br/></h4>
 <p>/admin/sitemap<br/></p>
@@ -173,7 +173,7 @@
 </div><h5 id="methods_sitemap_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-sitemap-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_stackgetid">stackGetid(object)</h3>
+<li><h3 id="methods_stackgetid">stackGetid()</h3>
 <div class="stackgetid"><div class="picard-service-picardadmin-stackgetid-page"><p>Gets STACK_ID and other code info from config<br/></p>
 <h4 id="endpoint-br-" id="methods_stackgetid_endpoint">Endpoint: <br/></h4>
 <p>/admin/stackId<br/></p>
@@ -185,7 +185,7 @@
 </div><h5 id="methods_stackgetid_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-stackgetid-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templatecatlist">templateCatlist(object)</h3>
+<li><h3 id="methods_templatecatlist">templateCatlist()</h3>
 <div class="templatecatlist"><div class="picard-service-picardadmin-templatecatlist-page"><p>Generates list of available template categories, for preopulating dropdowns in template page<br/></p>
 <h4 id="endpoint-br-" id="methods_templatecatlist_endpoint">Endpoint: <br/></h4>
 <p>/admin/templateCatList<br/></p>
@@ -197,7 +197,7 @@
 </div><h5 id="methods_templatecatlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templatecatlist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templatecreate">templateCreate(object)</h3>
+<li><h3 id="methods_templatecreate">templateCreate(category, name, description, htmlbody, txtsubject, txtbody)</h3>
 <div class="templatecreate"><div class="picard-service-picardadmin-templatecreate-page"><p>Creates new template<br/></p>
 <h4 id="endpoint-br-" id="methods_templatecreate_endpoint">Endpoint: <br/></h4>
 <p>/admin/template<br/></p>
@@ -206,16 +206,16 @@
 <h4 id="usage" id="methods_templatecreate_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templateCreate(http_request_params)
 </code></pre>
-</div><h5 id="methods_templatecreate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"comment": "Category to add template to", "required": true}|json}}</pre>
-</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"comment": "Template Name", "required": true}|json}}</pre>
-</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"default": "", "comment": "Template description, optional note"}|json}}</pre>
-</div></td></tr><tr><td>htmlbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"default": "", "comment": "HTML Template Body"}|json}}</pre>
-</div></td></tr><tr><td>txtsubject</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"default": "", "comment": "HTML Template Subject"}|json}}</pre>
-</div></td></tr><tr><td>txtbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="">{{{"default": "", "comment": "Text Template Body"}|json}}</pre>
+</div><h5 id="methods_templatecreate_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"comment": "Category to add template to", "required": true}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"comment": "Template Name", "required": true}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"default": "", "comment": "Template description, optional note"}</pre>
+</div></td></tr><tr><td>htmlbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"default": "", "comment": "HTML Template Body"}</pre>
+</div></td></tr><tr><td>txtsubject</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"default": "", "comment": "HTML Template Subject"}</pre>
+</div></td></tr><tr><td>txtbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><pre class="prettyprint linenums">{"default": "", "comment": "Text Template Body"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templatecreate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templatecreate-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templatefunctest">templateFunctest(object)</h3>
+<li><h3 id="methods_templatefunctest">templateFunctest(category, name, mimetype, jvars, mail)</h3>
 <div class="templatefunctest"><div class="picard-service-picardadmin-templatefunctest-page"><p>Tests rendering, using default generic mail template.<br/></p>
 <h4 id="endpoint-br-" id="methods_templatefunctest_endpoint">Endpoint: <br/></h4>
 <p>/admin/templateTest<br/></p>
@@ -224,15 +224,15 @@
 <h4 id="usage" id="methods_templatefunctest_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templateFunctest(http_request_params)
 </code></pre>
-</div><h5 id="methods_templatefunctest_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="">{{{"comment": "Template category", "required": true}|json}}</pre>
-</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="">{{{"comment": "Name of template to render", "required": true}|json}}</pre>
-</div></td></tr><tr><td>mimetype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="">{{{"default": "text", "comment": "Mimetype of template to render"}|json}}</pre>
-</div></td></tr><tr><td>jvars</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="">{{{"default": {}, "comment": "Dictionary of key value pairs to interpolate"}|json}}</pre>
-</div></td></tr><tr><td>mail</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="">{{{"default": false, "comment": "If True then email is sent to calling users email address."}|json}}</pre>
+</div><h5 id="methods_templatefunctest_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="prettyprint linenums">{"comment": "Template category", "required": true}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="prettyprint linenums">{"comment": "Name of template to render", "required": true}</pre>
+</div></td></tr><tr><td>mimetype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="prettyprint linenums">{"default": "text", "comment": "Mimetype of template to render"}</pre>
+</div></td></tr><tr><td>jvars</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="prettyprint linenums">{"default": {}, "comment": "Dictionary of key value pairs to interpolate"}</pre>
+</div></td></tr><tr><td>mail</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><pre class="prettyprint linenums">{"default": false, "comment": "If True then email is sent to calling users email address."}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templatefunctest_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templatefunctest-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templateget">templateGet(object)</h3>
+<li><h3 id="methods_templateget">templateGet(category, name)</h3>
 <div class="templateget"><div class="picard-service-picardadmin-templateget-page"><p>Provides single templates from database<br/></p>
 <h4 id="endpoint-br-" id="methods_templateget_endpoint">Endpoint: <br/></h4>
 <p>/admin/template<br/></p>
@@ -241,12 +241,12 @@
 <h4 id="usage" id="methods_templateget_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templateGet(http_request_params)
 </code></pre>
-</div><h5 id="methods_templateget_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateget-page"><pre class="">{{{"comment": "Template Category", "required": true}|json}}</pre>
-</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateget-page"><pre class="">{{{"comment": "Template Name", "required": true}|json}}</pre>
+</div><h5 id="methods_templateget_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateget-page"><pre class="prettyprint linenums">{"comment": "Template Category", "required": true}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateget-page"><pre class="prettyprint linenums">{"comment": "Template Name", "required": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templateget_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templateget-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templatelist">templateList(object)</h3>
+<li><h3 id="methods_templatelist">templateList(category, qfilter, limit, page)</h3>
 <div class="templatelist"><div class="picard-service-picardadmin-templatelist-page"><p>Generates list of available templates, filterable<br/></p>
 <h4 id="endpoint-br-" id="methods_templatelist_endpoint">Endpoint: <br/></h4>
 <p>/admin/templateList<br/></p>
@@ -255,14 +255,14 @@
 <h4 id="usage" id="methods_templatelist_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templateList(http_request_params)
 </code></pre>
-</div><h5 id="methods_templatelist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="">{{{"default": null, "comment": "Template Category"}|json}}</pre>
-</div></td></tr><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="">{{{"default": null, "comment": "Query filter for list"}|json}}</pre>
-</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="">{{{"default": 10, "comment": "Limit list to x results starting at page"}|json}}</pre>
-</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="">{{{"default": 0, "comment": "Page to start on (limit * page is first page returned)"}|json}}</pre>
+</div><h5 id="methods_templatelist_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Template Category"}</pre>
+</div></td></tr><tr><td>qfilter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Query filter for list"}</pre>
+</div></td></tr><tr><td>limit</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="prettyprint linenums">{"default": 10, "comment": "Limit list to x results starting at page"}</pre>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardadmin-templatelist-page"><pre class="prettyprint linenums">{"default": 0, "comment": "Page to start on (limit * page is first page returned)"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templatelist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templatelist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templateupdate">templateUpdate(object)</h3>
+<li><h3 id="methods_templateupdate">templateUpdate(category, name, description, htmlbody, txtsubject, txtbody)</h3>
 <div class="templateupdate"><div class="picard-service-picardadmin-templateupdate-page"><p>Updates existing template<br/></p>
 <h4 id="endpoint-br-" id="methods_templateupdate_endpoint">Endpoint: <br/></h4>
 <p>/admin/template<br/></p>
@@ -271,16 +271,16 @@
 <h4 id="usage" id="methods_templateupdate_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templateUpdate(http_request_params)
 </code></pre>
-</div><h5 id="methods_templateupdate_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"matches": "^[A-Za-z0-9_]+$", "comment": "Category to add template to", "required": true}|json}}</pre>
-</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"matches": "^[A-Za-z0-9_]+$", "comment": "Template Name", "required": true}|json}}</pre>
-</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"default": "", "comment": "Template description, optional note"}|json}}</pre>
-</div></td></tr><tr><td>htmlbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"default": "", "comment": "HTML template Body"}|json}}</pre>
-</div></td></tr><tr><td>txtsubject</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"default": "", "comment": "HTML Template Subject"}|json}}</pre>
-</div></td></tr><tr><td>txtbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="">{{{"default": "", "comment": "Text Template Body"}|json}}</pre>
+</div><h5 id="methods_templateupdate_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"matches": "^[A-Za-z0-9_]+$", "comment": "Category to add template to", "required": true}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"matches": "^[A-Za-z0-9_]+$", "comment": "Template Name", "required": true}</pre>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"default": "", "comment": "Template description, optional note"}</pre>
+</div></td></tr><tr><td>htmlbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"default": "", "comment": "HTML template Body"}</pre>
+</div></td></tr><tr><td>txtsubject</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"default": "", "comment": "HTML Template Subject"}</pre>
+</div></td></tr><tr><td>txtbody</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><pre class="prettyprint linenums">{"default": "", "comment": "Text Template Body"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templateupdate_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templateupdate-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_templatesdelete">templatesDelete(object)</h3>
+<li><h3 id="methods_templatesdelete">templatesDelete(category, name)</h3>
 <div class="templatesdelete"><div class="picard-service-picardadmin-templatesdelete-page"><p>Deletes existing template<br/></p>
 <h4 id="endpoint-br-" id="methods_templatesdelete_endpoint">Endpoint: <br/></h4>
 <p>/admin/template<br/></p>
@@ -289,8 +289,8 @@
 <h4 id="usage" id="methods_templatesdelete_usage">Usage</h4>
 <pre><code class="lang-js"> picardAdmin.templatesDelete(http_request_params)
 </code></pre>
-</div><h5 id="methods_templatesdelete_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatesdelete-page"><pre class="">{{{"comment": "Category to del template from", "required": true}|json}}</pre>
-</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatesdelete-page"><pre class="">{{{"comment": "Template Name", "required": true}|json}}</pre>
+</div><h5 id="methods_templatesdelete_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>category</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatesdelete-page"><pre class="prettyprint linenums">{"comment": "Category to del template from", "required": true}</pre>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardadmin-templatesdelete-page"><pre class="prettyprint linenums">{"comment": "Template Name", "required": true}</pre>
 </div></td></tr></tbody></table><h5 id="methods_templatesdelete_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardadmin-templatesdelete-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>

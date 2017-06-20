@@ -6,7 +6,7 @@
 <div><h2 id="description">Description</h2>
 <div class="description"></div>
 <div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><h3 id="methods_geoipclosebyname">geoipClosebyname(object)</h3>
+<ul class="methods"><li><h3 id="methods_geoipclosebyname">geoipClosebyname(target, count, targettype, distance, supertarget, supertype)</h3>
 <div class="geoipclosebyname"><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><p>Generates a list of targets within a certain range of a target<br/></p>
 <h4 id="endpoint-br-" id="methods_geoipclosebyname_endpoint">Endpoint: <br/></h4>
 <p>/geoiptool/targetClosebyname<br/></p>
@@ -15,16 +15,16 @@
 <h4 id="usage" id="methods_geoipclosebyname_usage">Usage</h4>
 <pre><code class="lang-js"> picardGeoiptool.geoipClosebyname(http_request_params)
 </code></pre>
-</div><h5 id="methods_geoipclosebyname_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"comment": "Target name to center on", "required": true}|json}}</pre>
-</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"default": null, "comment": "Get first N entries from list"}|json}}</pre>
-</div></td></tr><tr><td>targettype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"default": "city", "comment": "Type of target (city/state/country/continent)"}|json}}</pre>
-</div></td></tr><tr><td>distance</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"default": 10, "comment": "Distance from target in km"}|json}}</pre>
-</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"default": null, "comment": "Name of supertarget"}|json}}</pre>
-</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="">{{{"default": "state", "comment": "Type of target (city/state/country/continent)"}|json}}</pre>
+</div><h5 id="methods_geoipclosebyname_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"comment": "Target name to center on", "required": true}</pre>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"default": null, "comment": "Get first N entries from list"}</pre>
+</div></td></tr><tr><td>targettype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"default": "city", "comment": "Type of target (city/state/country/continent)"}</pre>
+</div></td></tr><tr><td>distance</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"default": 10, "comment": "Distance from target in km"}</pre>
+</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"default": null, "comment": "Name of supertarget"}</pre>
+</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><pre class="prettyprint linenums">{"default": "state", "comment": "Type of target (city/state/country/continent)"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_geoipclosebyname_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardgeoiptool-geoipclosebyname-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_geoipguess">geoipGuess(object)</h3>
+<li><h3 id="methods_geoipguess">geoipGuess(target, supertype, supertarget)</h3>
 <div class="geoipguess"><div class="picard-service-picardgeoiptool-geoipguess-page"><p>Guesses location attributes of provided city<br/></p>
 <h4 id="endpoint-br-" id="methods_geoipguess_endpoint">Endpoint: <br/></h4>
 <p>/geoiptool/targetGuess<br/></p>
@@ -33,13 +33,13 @@
 <h4 id="usage" id="methods_geoipguess_usage">Usage</h4>
 <pre><code class="lang-js"> picardGeoiptool.geoipGuess(http_request_params)
 </code></pre>
-</div><h5 id="methods_geoipguess_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="">{{{"comment": "City to guess", "required": true}|json}}</pre>
-</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="">{{{"default": "state", "comment": "Type of target (city/state/country/continent)"}|json}}</pre>
-</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="">{{{"default": null, "comment": "Name of supertarget"}|json}}</pre>
+</div><h5 id="methods_geoipguess_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="prettyprint linenums">{"comment": "City to guess", "required": true}</pre>
+</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="prettyprint linenums">{"default": "state", "comment": "Type of target (city/state/country/continent)"}</pre>
+</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><pre class="prettyprint linenums">{"default": null, "comment": "Name of supertarget"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_geoipguess_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardgeoiptool-geoipguess-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_geoiprandom">geoipRandom(object)</h3>
+<li><h3 id="methods_geoiprandom">geoipRandom(supertype, targettype, count, supertarget)</h3>
 <div class="geoiprandom"><div class="picard-service-picardgeoiptool-geoiprandom-page"><p>Generates a list of targets for specified type<br/></p>
 <h4 id="endpoint-br-" id="methods_geoiprandom_endpoint">Endpoint: <br/></h4>
 <p>/geoiptool/targetList<br/></p>
@@ -48,14 +48,14 @@
 <h4 id="usage" id="methods_geoiprandom_usage">Usage</h4>
 <pre><code class="lang-js"> picardGeoiptool.geoipRandom(http_request_params)
 </code></pre>
-</div><h5 id="methods_geoiprandom_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="">{{{"default": "state", "comment": "Type of target (city/state/country/continent)"}|json}}</pre>
-</div></td></tr><tr><td>targettype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="">{{{"default": "city", "comment": "Type of target (city/state/country/continent)"}|json}}</pre>
-</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="">{{{"default": null, "comment": "Get N random entries from list"}|json}}</pre>
-</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="">{{{"default": null, "comment": "Name of supertarget"}|json}}</pre>
+</div><h5 id="methods_geoiprandom_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="prettyprint linenums">{"default": "state", "comment": "Type of target (city/state/country/continent)"}</pre>
+</div></td></tr><tr><td>targettype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="prettyprint linenums">{"default": "city", "comment": "Type of target (city/state/country/continent)"}</pre>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="prettyprint linenums">{"default": null, "comment": "Get N random entries from list"}</pre>
+</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><pre class="prettyprint linenums">{"default": null, "comment": "Name of supertarget"}</pre>
 </div></td></tr></tbody></table><h5 id="methods_geoiprandom_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardgeoiptool-geoiprandom-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_geoipdbreload">geoipdbReload(object)</h3>
+<li><h3 id="methods_geoipdbreload">geoipdbReload()</h3>
 <div class="geoipdbreload"><div class="picard-service-picardgeoiptool-geoipdbreload-page"><p>Pulls down new copy of geoipdb and reloads<br/></p>
 <h4 id="endpoint-br-" id="methods_geoipdbreload_endpoint">Endpoint: <br/></h4>
 <p>/geoiptool/dbReload<br/></p>
@@ -67,7 +67,7 @@
 </div><h5 id="methods_geoipdbreload_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardgeoiptool-geoipdbreload-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>
-<li><h3 id="methods_randomlist">randomList(object)</h3>
+<li><h3 id="methods_randomlist">randomList(target, count, supertarget, location, supertype, type)</h3>
 <div class="randomlist"><div class="picard-service-picardgeoiptool-randomlist-page"><p>Generates a list of random IP addresses<br/></p>
 <h4 id="endpoint-br-" id="methods_randomlist_endpoint">Endpoint: <br/></h4>
 <p>/geoiptool/randomList<br/></p>
@@ -76,12 +76,12 @@
 <h4 id="usage" id="methods_randomlist_usage">Usage</h4>
 <pre><code class="lang-js"> picardGeoiptool.randomList(http_request_params)
 </code></pre>
-</div><h5 id="methods_randomlist_usage_function-argument-object-parameters">Function Argument Object Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"comment": "Target name", "required": true}|json}}</pre>
-</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"default": 1, "comment": "Number of IP addresses to generate"}|json}}</pre>
-</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"default": null, "comment": "Supertarget Name"}|json}}</pre>
-</div></td></tr><tr><td>location</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"default": false, "comment": "Flag to include lat/long data with ip"}|json}}</pre>
-</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"default": null, "comment": "Type of supertarget", "in": ["city", "state", "country", "continent"]}|json}}</pre>
-</div></td></tr><tr><td>type <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">Array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="">{{{"default": "city", "comment": "Type of target", "in": ["city", "state", "country", "continent"]}|json}}</pre>
+</div><h5 id="methods_randomlist_usage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"comment": "Target name", "required": true}</pre>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"default": 1, "comment": "Number of IP addresses to generate"}</pre>
+</div></td></tr><tr><td>supertarget</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Supertarget Name"}</pre>
+</div></td></tr><tr><td>location</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"default": false, "comment": "Flag to include lat/long data with ip"}</pre>
+</div></td></tr><tr><td>supertype</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"default": null, "comment": "Type of supertarget", "in": ["city", "state", "country", "continent"]}</pre>
+</div></td></tr><tr><td>type <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">Array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><pre class="prettyprint linenums">{"default": "city", "comment": "Type of target", "in": ["city", "state", "country", "continent"]}</pre>
 </div></td></tr></tbody></table><h5 id="methods_randomlist_usage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="picard-service-picardgeoiptool-randomlist-page"><p>Paired down response of angulars $http method</p>
 </div></td></tr></table></div>
 </li>

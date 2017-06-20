@@ -237,6 +237,19 @@ angular
              */
             delete: function (endpoint, params, options) {
                 return makeHttpRequest('DELETE', endpoint, params, options);
+            },
+            /**
+             * @ngdoc function
+             * @name picard.service.picard#updateBaseUrl
+             * @methodOf picard.service.picard
+             *
+             * @description
+             * Public function which allows dynamic change of the base connection URL.
+             *
+             * @param {string} picardBaseUrl valid URL address of the desired Picard backend.
+             */
+            updateBaseUrl: function (picardBaseUrl) {
+                baseUrl = picardBaseUrl;
             }
         }
     }])
@@ -262,4 +275,3 @@ angular
             picardEndpoints.routes = endpoints;
         });
     });
-
