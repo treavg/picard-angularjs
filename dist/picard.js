@@ -3120,7 +3120,7 @@ angular
          */
 
         function err(opts, res) {
-            var ret = res.data;
+            var ret = res.data === null ? {} : res.data;
             ret.status = res.status;
             if (opts.fullResponse) {
                 ret = res;
