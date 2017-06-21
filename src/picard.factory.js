@@ -168,11 +168,18 @@ angular
          */
 
         function err(opts, res) {
-            var ret = res.data === null ? {} : res.data;
-            ret.status = res.status;
-            if (opts.fullResponse) {
-                ret = res;
+
+            var ret = opts.fullResponse ? res : res.data;
+
+            if (ret === null) {
+                ret = {
+                    "error" : "",
+                    "message" : "",
+                    "method" : res.config.method,
+                    "path" : res.config.url
+                };
             }
+            ret.status = res.status;
             return $q.reject(ret);
         }
 
